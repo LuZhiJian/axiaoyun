@@ -206,16 +206,12 @@ a:focus {
 
 .main-wrapper {
   width: 100%;
+  height: 100%;
 }
 
-header {
-  height: 2rem;
-  line-height: 2rem;
-  background: #abcdef;
-  font-size: 0.75rem;
-}
-
-content {
-  font-size: 1rem;
-  color: #ef096c;
+.main-wrapper .content {
+  width: 100%;
+  height: 100%;
+  background: url("../img/point_bg@2x.png") no-repeat;
+  background-size: cover;
 }
