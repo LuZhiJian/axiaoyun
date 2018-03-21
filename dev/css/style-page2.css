@@ -131,6 +131,23 @@ q:before {
   content: none;
 }
 
+@keyframes upToDown {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    -webkit-transform: translate(0px, -10px);
+    transform: translate(0px, -10px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+}
+
 .main-wrapper {
   width: 100%;
   max-width: 750px;

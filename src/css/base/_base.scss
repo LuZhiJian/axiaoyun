@@ -3,18 +3,24 @@
 @import "./_var";
 @import "./_animate";
 
+$color-base: #fffbea;
+$color-orange: #cd4c43;
+$color-orange-hover: #b03e37;
+$color-blue: #286e97;
+$color-blue-hover: #1e5b7f;
+
 .main-wrapper {
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
 }
 html,body{
-    height:100%;
-    background:#fffbea;   
-    position: relative; 
+  height: 100%;
+  background: $color-base;
+  position: relative;
 }
 img{
-    display:block;
+    display: block;
 }
 /*黑色线条*/
 .line{
