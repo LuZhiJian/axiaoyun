@@ -152,18 +152,73 @@ body {
   display: block;
 }
 
-.main-wrapper {
+.bg {
+  background: #fffbea;
+}
+
+.foot8 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
 }
 
-header {
-  height: 2rem;
-  line-height: 2rem;
-  background: #abcdef;
-  font-size: 0.75rem;
+.bd8 {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
 }
 
-content {
-  font-size: 1rem;
-  color: #ef096c;
+.leftCloud8 {
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  width: 3.925rem;
+}
+
+.rightCloud8 {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  width: 3.775rem;
+}
+
+.line8_1 {
+  position: absolute;
+  top: 2.05rem;
+  left: 4.9rem;
+  width: 3.025rem;
+}
+
+.line8_1 .line8_1_1 {
+  width: 2.45rem;
+  float: left;
+}
+
+.line8_1 .line8_1_2 {
+  width: 0.35rem;
+  float: right;
+  margin-top: 0.025rem;
+}
+
+.line8_2 {
+  top: 9rem;
+  left: 11.075rem;
+}
+
+.line8_3 {
+  position: absolute;
+  top: 8.325rem;
+  left: 0;
+  width: 1.4rem;
+}
+
+.line8_3 .line8_3_1 {
+  width: 0.9rem;
+}
+
+.line8_3 .line8_3_2 {
+  width: 1.4rem;
+  margin-top: 0.35rem;
 }

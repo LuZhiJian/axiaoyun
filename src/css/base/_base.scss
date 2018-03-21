@@ -8,3 +8,14 @@
   max-width: 750px;
   margin: 0 auto;
 }
+html,body{
+    height:100%;
+    background:#fffbea;   
+    position: relative; 
+}
+/*黑色线条*/
+.line{
+    background:#0d0d0d;
+    height:2px;
+    display:block;
+}

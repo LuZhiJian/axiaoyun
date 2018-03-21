@@ -1,0 +1,61 @@
+@import "./base/_base";
+
+.bg{
+    background:#fffbea;    
+}
+.foot8{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+.bd8{
+    position:absolute;
+    top:60%;
+    left:0;
+    width:100%;
+}
+.leftCloud8{
+    position:absolute;
+    top:rem(180);
+    left:0;
+    width:rem(157);
+}
+.rightCloud8{
+    position:absolute;
+    top:rem(60);
+    right:0;
+    width:rem(151);
+}
+.line8_1{
+    position:absolute;
+    top:rem(82);
+    left:rem(196);
+    width:rem(121);
+    .line8_1_1{
+        width:rem(98);
+        float:left;
+    }
+    .line8_1_2{
+        width:rem(14);
+        float:right;
+        margin-top:rem(1);
+    }
+}
+.line8_2{
+    top:rem(360);
+    left:rem(443);
+}
+.line8_3{
+    position:absolute;
+    top:rem(333);
+    left:0;
+    width:rem(56);
+    .line8_3_1{
+        width:rem(36);
+    }
+    .line8_3_2{
+        width:rem(56);
+        margin-top:rem(14);
+    }
+}
