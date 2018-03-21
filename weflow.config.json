@@ -1,0 +1,21 @@
+{
+    "ftp": {
+        "host": "",
+        "port": "",
+        "user": "",
+        "pass": "",
+        "remotePath": "",
+        "includeHtml": false,
+        "ssh": false
+    },
+    "livereload": true,
+    "lazyDir": [
+        "../slice",
+        "../svg"
+    ],
+    "supportREM": false,
+    "supportWebp": false,
+    "supportChanged": true,
+    "reversion": false,
+    "SVGGracefulDegradation": false
+}
