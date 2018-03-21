@@ -1,0 +1,20 @@
+@import "./base/_base";
+
+.page6{
+    height:100%;
+    width:100%;
+    background:url(../img/H5_part06.jpg) no-repeat;
+    background-size:100% auto;
+    .car{
+        position:absolute;
+        top:rem(391);
+        left:rem(8);
+        width:rem(374);
+    }
+    .street_signs{
+        width:rem(49);
+        position:absolute;
+        top:rem(127);
+        right:rem(147);
+    }
+}

@@ -204,11 +204,23 @@ a:focus {
   background: #1e5b7f;
 }
 
-.main-wrapper {
+.page6 {
+  height: 100%;
   width: 100%;
+  background: url(../img/H5_part06.jpg) no-repeat;
+  background-size: 100% auto;
 }
 
-.page2 {
-  font-size: 1rem;
-  color: #f6f;
+.page6 .car {
+  position: absolute;
+  top: 9.775rem;
+  left: 0.2rem;
+  width: 9.35rem;
+}
+
+.page6 .street_signs {
+  width: 1.225rem;
+  position: absolute;
+  top: 3.175rem;
+  right: 3.675rem;
 }

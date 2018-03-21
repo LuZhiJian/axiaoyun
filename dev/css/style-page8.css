@@ -148,6 +148,19 @@ img {
   display: block;
 }
 
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
 /*黑色线条*/
 
 .line {
@@ -156,155 +169,186 @@ img {
   display: block;
 }
 
-.bg {
-  background: #fffbea;
+/*贱不贱按钮*/
+
+.com_btn {
+  position: absolute;
+  bottom: 3.3rem;
+  width: 13rem;
+  margin-left: 2.9rem;
 }
 
-.foot8 {
+.com_btn .btn {
+  display: inline-block;
+  width: 5.9rem;
+  background: #286e97;
+  height: 1.9rem;
+  line-height: 1.75rem;
+  border: 2px solid #000;
+  border-radius: 0.3rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.com_btn .btn_no {
+  background: #cd4c43;
+  margin-left: 1rem;
+}
+
+.com_btn .btn_no:active {
+  background: #b03e37;
+}
+
+.com_btn .btn_yes:active {
+  background: #1e5b7f;
+}
+
+.page8 .foot8 {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
 }
 
-.bd8 {
+.page8 .bd8 {
   position: absolute;
   top: 60%;
   left: 0;
   width: 100%;
 }
 
-.leftCloud8 {
+.page8 .leftCloud8 {
   position: absolute;
   top: 4.5rem;
   left: 0;
   width: 3.925rem;
 }
 
-.rightCloud8 {
+.page8 .rightCloud8 {
   position: absolute;
   top: 1.5rem;
   right: 0;
   width: 3.775rem;
 }
 
-.line8_1 {
+.page8 .line8_1 {
   position: absolute;
   top: 2.05rem;
   left: 4.9rem;
   width: 3.025rem;
 }
 
-.line8_1 .line8_1_1 {
+.page8 .line8_1 .line8_1_1 {
   width: 2.45rem;
   float: left;
 }
 
-.line8_1 .line8_1_2 {
+.page8 .line8_1 .line8_1_2 {
   width: 0.35rem;
   float: right;
   margin-top: 0.025rem;
 }
 
-.line8_2 {
+.page8 .line8_2 {
   top: 9rem;
   left: 11.075rem;
 }
 
-.line8_3 {
+.page8 .line8_3 {
   position: absolute;
   top: 8.325rem;
   left: 0;
   width: 1.4rem;
 }
 
-.line8_3 .line8_3_1 {
+.page8 .line8_3 .line8_3_1 {
   width: 0.9rem;
 }
 
-.line8_3 .line8_3_2 {
+.page8 .line8_3 .line8_3_2 {
   width: 1.4rem;
   margin-top: 0.35rem;
 }
 
-.line8_4 {
+.page8 .line8_4 {
   position: absolute;
   top: 15.05rem;
   left: 0;
   width: 6.15rem;
 }
 
-.line8_4 .line8_4_1 {
+.page8 .line8_4 .line8_4_1 {
   width: 1.8rem;
   float: left;
 }
 
-.line8_4 .line8_4_2 {
+.page8 .line8_4 .line8_4_2 {
   width: 2.45rem;
   float: right;
 }
 
-.line8_5 {
+.page8 .line8_5 {
   position: absolute;
   top: 15.5rem;
   right: 0;
   width: 2.35rem;
 }
 
-.line8_5 .line8_5_1 {
+.page8 .line8_5 .line8_5_1 {
   width: 2.35rem;
 }
 
-.line8_5 .line8_5_2 {
+.page8 .line8_5 .line8_5_2 {
   width: 1.45rem;
   margin-top: 0.4rem;
   float: right;
 }
 
-.line8_6 {
+.page8 .line8_6 {
   position: absolute;
   top: 16.65rem;
   left: 0;
   width: 3.5rem;
 }
 
-.line8_6 .line8_6_1 {
+.page8 .line8_6 .line8_6_1 {
   width: 2.425rem;
 }
 
-.line8_6 .line8_6_2 {
+.page8 .line8_6 .line8_6_2 {
   width: 2.45rem;
   margin: 0.3rem 0 0 1.025rem;
 }
 
-.line8_6 .tree8 {
+.page8 .line8_6 .tree8 {
   width: 0.975rem;
   margin-left: 0.7rem;
 }
 
-.line8_7 {
+.page8 .line8_7 {
   position: absolute;
   top: 5.75rem;
   right: 0;
   width: 2.25rem;
 }
 
-.line8_7 .line8_7_1 {
+.page8 .line8_7 .line8_7_1 {
   width: 2.25rem;
 }
 
-.line8_7 .line8_7_2 {
+.page8 .line8_7 .line8_7_2 {
   width: 1.25rem;
   float: right;
   margin-top: 0.35rem;
 }
 
-.line8_7 .street_signs8 {
+.page8 .line8_7 .street_signs8 {
   width: 1.225rem;
   margin-left: 0.75rem;
 }
 
-.car8 {
+.page8 .car8 {
   position: absolute;
   top: 10.2rem;
   left: 3.425rem;

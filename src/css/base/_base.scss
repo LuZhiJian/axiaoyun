@@ -16,9 +16,45 @@ html,body{
 img{
     display:block;
 }
+a,a:hover,a:active,a:visited,a:link,a:focus{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    outline:none;
+    background: none;
+    text-decoration: none;
+}
 /*黑色线条*/
 .line{
     background:#0d0d0d;
     height:2px;
     display:block;
+}
+/*贱不贱按钮*/
+.com_btn{
+    position: absolute;
+    bottom:rem(132);
+    width:rem(520);
+    margin-left:rem(116);
+    .btn{
+        display:inline-block;
+        width:rem(236);
+        background:#286e97;
+        height:rem(76);
+        line-height:rem(70);
+        border:2px solid #000;
+        border-radius:rem(12);
+        text-align:center;
+        color:#fff;
+        font-size:rem(45);
+    }
+    .btn_no{
+        background:#cd4c43;
+        margin-left:rem(40);
+    }
+    .btn_no:active{
+        background:#b03e37;
+    }
+    .btn_yes:active{
+        background:#1e5b7f;
+    }
 }

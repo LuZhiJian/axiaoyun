@@ -1,131 +1,130 @@
 @import "./base/_base";
 
-.bg{
-    background:#fffbea;    
-}
-.foot8{
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-}
-.bd8{
-    position:absolute;
-    top:60%;
-    left:0;
-    width:100%;
-}
-.leftCloud8{
-    position:absolute;
-    top:rem(180);
-    left:0;
-    width:rem(157);
-}
-.rightCloud8{
-    position:absolute;
-    top:rem(60);
-    right:0;
-    width:rem(151);
-}
-.line8_1{
-    position:absolute;
-    top:rem(82);
-    left:rem(196);
-    width:rem(121);
-    .line8_1_1{
-        width:rem(98);
-        float:left;
+.page8{
+    .foot8{
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
     }
-    .line8_1_2{
-        width:rem(14);
-        float:right;
-        margin-top:rem(1);
+    .bd8{
+        position:absolute;
+        top:60%;
+        left:0;
+        width:100%;
     }
-}
-.line8_2{
-    top:rem(360);
-    left:rem(443);
-}
-.line8_3{
-    position:absolute;
-    top:rem(333);
-    left:0;
-    width:rem(56);
-    .line8_3_1{
-        width:rem(36);
+    .leftCloud8{
+        position:absolute;
+        top:rem(180);
+        left:0;
+        width:rem(157);
     }
-    .line8_3_2{
+    .rightCloud8{
+        position:absolute;
+        top:rem(60);
+        right:0;
+        width:rem(151);
+    }
+    .line8_1{
+        position:absolute;
+        top:rem(82);
+        left:rem(196);
+        width:rem(121);
+        .line8_1_1{
+            width:rem(98);
+            float:left;
+        }
+        .line8_1_2{
+            width:rem(14);
+            float:right;
+            margin-top:rem(1);
+        }
+    }
+    .line8_2{
+        top:rem(360);
+        left:rem(443);
+    }
+    .line8_3{
+        position:absolute;
+        top:rem(333);
+        left:0;
         width:rem(56);
-        margin-top:rem(14);
+        .line8_3_1{
+            width:rem(36);
+        }
+        .line8_3_2{
+            width:rem(56);
+            margin-top:rem(14);
+        }
     }
-}
-.line8_4{
-    position:absolute;
-    top:rem(602);
-    left:0;
-    width:rem(246);
-    .line8_4_1{
-        width:rem(72);
-        float:left;
+    .line8_4{
+        position:absolute;
+        top:rem(602);
+        left:0;
+        width:rem(246);
+        .line8_4_1{
+            width:rem(72);
+            float:left;
+        }
+        .line8_4_2{
+            width:rem(98);
+            float:right;
+        }
     }
-    .line8_4_2{
-        width:rem(98);
-        float:right;
-    }
-}
-.line8_5{
-    position:absolute;
-    top:rem(620);
-    right:0;
-    width:rem(94);
-    .line8_5_1{
+    .line8_5{
+        position:absolute;
+        top:rem(620);
+        right:0;
         width:rem(94);
+        .line8_5_1{
+            width:rem(94);
+        }
+        .line8_5_2{
+            width:rem(58);
+            margin-top:rem(16);
+            float: right;
+        }
     }
-    .line8_5_2{
-        width:rem(58);
-        margin-top:rem(16);
-        float: right;
+    .line8_6{
+        position:absolute;
+        top:rem(666);
+        left:0;
+        width:rem(140);
+        .line8_6_1{
+            width:rem(97);
+        }
+        .line8_6_2{
+            width:rem(98);
+            margin:rem(12) 0 0 rem(41);
+        }
+        .tree8{
+            width:rem(39);
+            margin-left:rem(28);
+        }
     }
-}
-.line8_6{
-    position:absolute;
-    top:rem(666);
-    left:0;
-    width:rem(140);
-    .line8_6_1{
-        width:rem(97);
-    }
-    .line8_6_2{
-        width:rem(98);
-        margin:rem(12) 0 0 rem(41);
-    }
-    .tree8{
-        width:rem(39);
-        margin-left:rem(28);
-    }
-}
 
-.line8_7{
-    position:absolute;
-    top:rem(230);
-    right:0;
-    width:rem(90);
-    .line8_7_1{
+    .line8_7{
+        position:absolute;
+        top:rem(230);
+        right:0;
         width:rem(90);
+        .line8_7_1{
+            width:rem(90);
+        }
+        .line8_7_2{
+            width:rem(50);
+            float:right;
+            margin-top:rem(14);
+        }
+        .street_signs8{
+            width:rem(49);
+            margin-left:rem(30);
+        }
     }
-    .line8_7_2{
-        width:rem(50);
-        float:right;
-        margin-top:rem(14);
+    .car8{
+        position:absolute;
+        top:rem(408);
+        left:rem(137);
+        width:rem(374);
     }
-    .street_signs8{
-        width:rem(49);
-        margin-left:rem(30);
-    }
-}
-.car8{
-    position:absolute;
-    top:rem(408);
-    left:rem(137);
-    width:rem(374);
 }
