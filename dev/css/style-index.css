@@ -144,6 +144,10 @@ body {
   position: relative;
 }
 
+img {
+  display: block;
+}
+
 /*黑色线条*/
 
 .line {
