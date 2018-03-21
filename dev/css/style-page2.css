@@ -139,14 +139,7 @@ q:before {
   width: 100%;
 }
 
-header {
-  height: 2rem;
-  line-height: 2rem;
-  background: #abcdef;
-  font-size: 0.75rem;
-}
-
-content {
+.page2 {
   font-size: 1rem;
-  color: #ef096c;
+  color: #f6f;
 }
