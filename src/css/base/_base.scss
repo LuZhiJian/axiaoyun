@@ -11,6 +11,7 @@
 html,body{
     height:100%;
     background:#fffbea;   
+    overflow:hidden;
     position: relative; 
 }
 img{
@@ -33,7 +34,6 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
 .com_btn{
     position: absolute;
     bottom:rem(132);
-    width:rem(520);
     margin-left:rem(116);
     .btn{
         display:inline-block;

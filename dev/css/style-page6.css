@@ -141,6 +141,7 @@ html,
 body {
   height: 100%;
   background: #fffbea;
+  overflow: hidden;
   position: relative;
 }
 
@@ -174,7 +175,6 @@ a:focus {
 .com_btn {
   position: absolute;
   bottom: 3.3rem;
-  width: 13rem;
   margin-left: 2.9rem;
 }
 
