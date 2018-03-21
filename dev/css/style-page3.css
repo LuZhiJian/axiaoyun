@@ -221,11 +221,23 @@ a:focus {
   background: #1e5b7f;
 }
 
-.main-wrapper {
+.page3 {
+  height: 100%;
   width: 100%;
+  background: url(../img/H5_part03.jpg) no-repeat;
+  background-size: 100% auto;
 }
 
-.page2 {
-  font-size: 1rem;
-  color: #f6f;
+.page3 .car {
+  position: absolute;
+  top: 10.925rem;
+  left: 2.95rem;
+  width: 9.35rem;
+}
+
+.page3 .cd {
+  position: absolute;
+  top: 18.75rem;
+  left: -1.125rem;
+  width: 5.4rem;
 }

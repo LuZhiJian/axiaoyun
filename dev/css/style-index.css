@@ -158,11 +158,25 @@ html,
 body {
   height: 100%;
   background: #fffbea;
+  overflow: hidden;
   position: relative;
 }
 
 img {
   display: block;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
 }
 
 /*黑色线条*/
@@ -171,6 +185,40 @@ img {
   background: #0d0d0d;
   height: 2px;
   display: block;
+}
+
+/*贱不贱按钮*/
+
+.com_btn {
+  position: absolute;
+  bottom: 3.3rem;
+  margin-left: 2.9rem;
+}
+
+.com_btn .btn {
+  display: inline-block;
+  width: 5.9rem;
+  background: #286e97;
+  height: 1.9rem;
+  line-height: 1.75rem;
+  border: 2px solid #000;
+  border-radius: 0.3rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.com_btn .btn_no {
+  background: #cd4c43;
+  margin-left: 1rem;
+}
+
+.com_btn .btn_no:active {
+  background: #b03e37;
+}
+
+.com_btn .btn_yes:active {
+  background: #1e5b7f;
 }
 
 .main-wrapper {
