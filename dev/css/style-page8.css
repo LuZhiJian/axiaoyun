@@ -144,6 +144,10 @@ body {
   position: relative;
 }
 
+img {
+  display: block;
+}
+
 /*黑色线条*/
 
 .line {
@@ -221,4 +225,88 @@ body {
 .line8_3 .line8_3_2 {
   width: 1.4rem;
   margin-top: 0.35rem;
+}
+
+.line8_4 {
+  position: absolute;
+  top: 15.05rem;
+  left: 0;
+  width: 6.15rem;
+}
+
+.line8_4 .line8_4_1 {
+  width: 1.8rem;
+  float: left;
+}
+
+.line8_4 .line8_4_2 {
+  width: 2.45rem;
+  float: right;
+}
+
+.line8_5 {
+  position: absolute;
+  top: 15.5rem;
+  right: 0;
+  width: 2.35rem;
+}
+
+.line8_5 .line8_5_1 {
+  width: 2.35rem;
+}
+
+.line8_5 .line8_5_2 {
+  width: 1.45rem;
+  margin-top: 0.4rem;
+  float: right;
+}
+
+.line8_6 {
+  position: absolute;
+  top: 16.65rem;
+  left: 0;
+  width: 3.5rem;
+}
+
+.line8_6 .line8_6_1 {
+  width: 2.425rem;
+}
+
+.line8_6 .line8_6_2 {
+  width: 2.45rem;
+  margin: 0.3rem 0 0 1.025rem;
+}
+
+.line8_6 .tree8 {
+  width: 0.975rem;
+  margin-left: 0.7rem;
+}
+
+.line8_7 {
+  position: absolute;
+  top: 5.75rem;
+  right: 0;
+  width: 2.25rem;
+}
+
+.line8_7 .line8_7_1 {
+  width: 2.25rem;
+}
+
+.line8_7 .line8_7_2 {
+  width: 1.25rem;
+  float: right;
+  margin-top: 0.35rem;
+}
+
+.line8_7 .street_signs8 {
+  width: 1.225rem;
+  margin-left: 0.75rem;
+}
+
+.car8 {
+  position: absolute;
+  top: 10.2rem;
+  left: 3.425rem;
+  width: 9.35rem;
 }
