@@ -9,10 +9,23 @@
     <meta name="apple-mobile-web-app-capable" content="no" />
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+    <script type="text/javascript">
+      function setRootSize() {
+        var docWid = window.document.documentElement,
+          width = docWid.getBoundingClientRect().width,
+          fontSize = (width >= 750) ? 40 : width / 750 * 40;
+        docWid.style.fontSize = fontSize + 'px';
+      }
+      window.addEventListener('resize', function() {
+        setRootSize();
+      }, false);
+      setRootSize();
+    </script>
 </head>
 <body>
   <div class="main-wrapper">
-    first page
+    <header>头部</header>
+    <content>内容部分</content>
   </div>
 </body>
 </html>

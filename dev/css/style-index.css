@@ -131,6 +131,16 @@ q:before {
 
 .main-wrapper {
   width: 100%;
-  background-color: #f00;
+}
+
+header {
+  height: 2rem;
+  line-height: 2rem;
+  background: #abcdef;
+  font-size: 0.75rem;
+}
+
+content {
   font-size: 1rem;
+  color: #ef096c;
 }
