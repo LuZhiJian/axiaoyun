@@ -2,3 +2,9 @@
 @import "./_reset";
 @import "./_var";
 @import "./_animate";
+
+.main-wrapper {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
