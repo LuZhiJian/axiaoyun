@@ -148,6 +148,28 @@ q:before {
   }
 }
 
+@keyframes twinkle {
+  0% {
+    background-image: url("../img/floor01.png");
+  }
+
+  25% {
+    background-image: url("../img/floor02.png");
+  }
+
+  50% {
+    background-image: url("../img/floor01.png");
+  }
+
+  75% {
+    background-image: url("../img/floor02.png");
+  }
+
+  100% {
+    background-image: url("../img/floor01.png");
+  }
+}
+
 .main-wrapper {
   width: 100%;
   max-width: 750px;
@@ -191,41 +213,187 @@ a:focus {
 
 .com_btn {
   position: absolute;
+  width: 100%;
+  text-align: center;
   bottom: 3.3rem;
-  margin-left: 2.9rem;
+  font-size: 0;
 }
 
 .com_btn .btn {
   display: inline-block;
   width: 5.9rem;
-  background: #286e97;
   height: 1.9rem;
   line-height: 1.75rem;
   border: 2px solid #000;
   border-radius: 0.3rem;
-  text-align: center;
   color: #fff;
   font-size: 1.125rem;
+  margin: 0rem 0.5rem;
 }
 
 .com_btn .btn_no {
   background: #cd4c43;
-  margin-left: 1rem;
 }
 
+.com_btn .btn_no:hover,
 .com_btn .btn_no:active {
   background: #b03e37;
+  transition: 0.5s;
 }
 
+.com_btn .btn_yes {
+  background-color: #286e97;
+}
+
+.com_btn .btn_yes:hover,
 .com_btn .btn_yes:active {
   background: #1e5b7f;
+  transition: 0.5s;
 }
 
 .main-wrapper {
   width: 100%;
+  height: 100%;
 }
 
 .page2 {
-  font-size: 1rem;
-  color: #f6f;
+  width: 100%;
+  height: 100%;
+  background: url("../img/point_bg.png") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.page2 .top-part {
+  width: 100%;
+  height: 85%;
+  background: url("../img/part2-top-bg.png") no-repeat;
+  background-size: contain;
+  background-position: top left;
+  position: relative;
+}
+
+.page2 .top-part .house {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8.75rem;
+  height: 35%;
+  background: url("../img/floor01.png") no-repeat;
+  background-size: contain;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: twinkle;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.page2 .top-part .cloud {
+  width: 5.8rem;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  line-height: 0;
+}
+
+.page2 .top-part .cloud img {
+  width: 100%;
+}
+
+.page2 .top-part .car {
+  width: 9.25rem;
+  position: absolute;
+  top: 12.8rem;
+  left: -9.5rem;
+}
+
+.page2 .top-part .car audio {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.page2 .top-part .car .car-sw {
+  line-height: 0;
+  width: 100%;
+}
+
+.page2 .top-part .car .car-sw .open {
+  display: none;
+}
+
+.page2 .top-part .car .car-sw .close {
+  display: block;
+}
+
+.page2 .top-part .car .car-sw.open .open {
+  display: block;
+}
+
+.page2 .top-part .car .car-sw.open .close {
+  display: none;
+}
+
+.page2 .top-part .car img {
+  width: 100%;
+}
+
+.page2 .top-part .welcome {
+  width: 1.5rem;
+  position: absolute;
+  top: 15.35rem;
+  left: 12.25rem;
+}
+
+.page2 .top-part .welcome .sign {
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  position: relative;
+}
+
+.page2 .top-part .welcome img {
+  width: 100%;
+}
+
+.page2 .top-part .welcome .welcome-txt {
+  width: 4rem;
+  height: 1.7rem;
+  background: url("../img/bubble.png") no-repeat;
+  background-size: contain;
+  text-align: center;
+  line-height: 1.35rem;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -1.95rem;
+  left: 50%;
+  display: none;
+  margin-left: -2rem;
+}
+
+.page2 .top-part .bottle {
+  width: 4.175rem;
+  line-height: 0;
+  position: absolute;
+  top: 75%;
+  left: 11.325rem;
+  -webkit-animation-name: upToDown;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: upToDown;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.page2 .top-part .bottle img {
+  width: 100%;
+}
+
+.page2 .bottom-part .com_btn {
+  position: static;
 }

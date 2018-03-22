@@ -75,3 +75,22 @@
     transform: translate(0px, 0px);
   }
 }
+
+// 楼房闪烁
+@keyframes twinkle {
+  0% {
+    background-image: url('../img/floor01.png');
+  }
+  25% {
+    background-image: url('../img/floor02.png');
+  }
+  50% {
+    background-image: url('../img/floor01.png');
+  }
+  75% {
+    background-image: url('../img/floor02.png');
+  }
+  100% {
+    background-image: url('../img/floor01.png');
+  }
+}
