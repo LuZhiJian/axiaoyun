@@ -5,10 +5,14 @@
     width:100%;
     background:url(../img/H5_part04.jpg) no-repeat;
     background-size:100% auto;
+    background-position:center center;
     .car{
         position:absolute;
-        top:rem(101);
+        top:8%;
         left:rem(18);
         width:rem(374);
+    }
+    .com_btn{
+        bottom:6%;
     }
 }

@@ -223,14 +223,14 @@ a:focus {
 
 .page8 .foot8 {
   position: absolute;
-  bottom: 0;
+  bottom: -8%;
   left: 0;
   width: 100%;
 }
 
 .page8 .bd8 {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 0;
   width: 100%;
 }
@@ -251,7 +251,7 @@ a:focus {
 
 .page8 .line8_1 {
   position: absolute;
-  top: 2.05rem;
+  top: 7%;
   left: 4.9rem;
   width: 3.025rem;
 }
@@ -268,13 +268,13 @@ a:focus {
 }
 
 .page8 .line8_2 {
-  top: 9rem;
+  top: 32%;
   left: 11.075rem;
 }
 
 .page8 .line8_3 {
   position: absolute;
-  top: 8.325rem;
+  top: 31%;
   left: 0;
   width: 1.4rem;
 }
@@ -290,7 +290,7 @@ a:focus {
 
 .page8 .line8_4 {
   position: absolute;
-  top: 15.05rem;
+  top: 53%;
   left: 0;
   width: 6.15rem;
 }
@@ -307,7 +307,7 @@ a:focus {
 
 .page8 .line8_5 {
   position: absolute;
-  top: 15.5rem;
+  top: 56%;
   right: 0;
   width: 2.35rem;
 }
@@ -324,7 +324,7 @@ a:focus {
 
 .page8 .line8_6 {
   position: absolute;
-  top: 16.65rem;
+  top: 58%;
   left: 0;
   width: 3.5rem;
 }
@@ -345,7 +345,7 @@ a:focus {
 
 .page8 .line8_7 {
   position: absolute;
-  top: 5.75rem;
+  top: 22%;
   right: 0;
   width: 2.25rem;
 }
@@ -367,7 +367,7 @@ a:focus {
 
 .page8 .car8 {
   position: absolute;
-  top: 10.2rem;
+  top: 36%;
   left: 3.425rem;
   width: 9.35rem;
 }

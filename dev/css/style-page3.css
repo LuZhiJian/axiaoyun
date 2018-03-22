@@ -226,6 +226,7 @@ a:focus {
   width: 100%;
   background: url(../img/H5_part03.jpg) no-repeat;
   background-size: 100% auto;
+  background-position: center center;
 }
 
 .page3 .car {
