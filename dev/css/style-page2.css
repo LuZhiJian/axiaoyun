@@ -394,6 +394,13 @@ a:focus {
   width: 100%;
 }
 
+.page2 .bottom-part {
+  width: 100%;
+  height: 15%;
+  display: block;
+  z-index: 99;
+}
+
 .page2 .bottom-part .com_btn {
   position: static;
 }

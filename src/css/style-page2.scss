@@ -130,6 +130,11 @@
   }
 
   .bottom-part {
+    width: 100%;
+    height: 15%;
+    display: block;
+    z-index: 99;
+
     .com_btn {
       position: static;
     }
