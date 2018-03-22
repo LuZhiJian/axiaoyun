@@ -9,7 +9,6 @@
 <meta name="apple-mobile-web-app-capable" content="no" />
 <meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" type="text/css" href="../css/style-page3.css" />
-<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
   function setRootSize() {
     var docWid = window.document.documentElement,
@@ -30,6 +29,9 @@
     <img src="../img/square02.png" class="square02" alt="" />
     <img src="../img/piano.png" class="piano" alt="" />
     <img src="../img/CD02.png" class="cd02" alt="" />
+    <div class="welcome-txt">
+      回收站!
+    </div>
 
     <!-- 线线 -->
     <div class="line8_1 line8_d1">      
@@ -88,14 +90,25 @@
       <span class="line line8_1_2"></span>
       <span class="line line8_1_3"></span>
     </div>
-
-
-    <img src="../img/car_close.png" class="car calcH" alt="" />
+    <div class="car" id="car">
+      <div class="car-sw">
+        <img src="../img/car_close.png" class="close">
+        <img src="../img/car_open.png" class="open">
+      </div>
+      <audio controls id="audio">
+        <source src="../media/open.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+      </audio>
+    </div>
     <!-- <img src="../img/CD.png" class="cd" alt="" /> -->
     <div class="com_btn">
         <a href="javascript:;" class="btn btn_yes">捡</a>
         <a href="javascript:;" class="btn btn_no">不捡</a>
     </div>
 </div>
+
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/jquery.easings.min.js"></script>
+<script type="text/javascript" src="../js/page3.js"></script>
 </body>
 </html>

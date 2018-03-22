@@ -9,7 +9,7 @@
     }
     .point_box{
         width: 100%;
-        height: 60%;
+        height: 52%;
         overflow: hidden;
         position: absolute;
         z-index: 5;
@@ -45,36 +45,31 @@
             position:absolute;
         }
     }
-    .boxer_box{
-        width: 100%;
-        height: 46%;
-        top: 24%;
+    .boxer1{
+        position:absolute;
+        top:23%;    
+        left:0;
+        height:47%;
+        z-index:9;
+    }
+    .boxer2{
+        position:absolute;
+        top:23%;
+        right:0;
+        height:47%;
+        z-index:9;
+    }
+    .line5_1_1{
+        width: rem(110);
         position: absolute;
-        white-space: nowrap;
-        font-size: 0;
-        .boxer1{
-            width: 40%;
-            height: auto;
-            display: inline-block;
-        }
-        .boxer2{
-            width: 40%;
-            height: auto;
-            margin-left: 20%;
-            display: inline-block;
-        }
-        .line5_1_1{
-            width: rem(110);
-            position: absolute;
-            top: 86%;
-            left: 33%;
-        }
-        .line5_1_2{
-            width: rem(110);
-            position: absolute;
-            top: 86%;
-            right: 20%;
-        }
+        top: 64%;
+        left: 33%;
+    }
+    .line5_1_2{
+        width: rem(110);
+        position: absolute;
+        top: 64%;
+        left: 65%;
     }
     
     .tree_box{
@@ -83,16 +78,15 @@
         top: 70%;
         position: absolute;
         .tree{
-            width: 5%;
-            height: auto;
+            height: 50%;
             top: 0%;
-            left: 28%;
+            left: 33%;
             position: absolute;
         }
         .line5_2_1{
             width: rem(80);
-            top: 47%;
-            left: 26.5%;
+            top: 48%;
+            left: 30%;
             position: absolute;
         }
         .line5_2_2{
@@ -169,15 +163,53 @@
         }
     }
     
-    .car{
-        width: 50%;
-        height: auto;
-        z-index: 15;
-        top: 50%;
+/*    .car{
+        height: 15%;
+        top: 49%;
         left: 4%;
         position: absolute;
+        z-index:999;
+    }*/
+    .car {
+        height: 15%;
+        top: 49%;
+        left: -30%;
+        position: absolute;
+        z-index:999;
+
+      audio {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+
+      .car-sw {
+        line-height: 0;
+        height: 100%;
+
+        .open {
+          display: none;
+        }
+
+        .close {
+          display: block;
+        }
+
+        &.open {
+          .open {
+            display: block;
+          }
+
+          .close {
+            display: none;
+          }
+        }
+      }
+
+      img {
+        height: 100%;
+      }
     }
-    
     .bottle{
         width: 20%;
         height: auto;
@@ -186,4 +218,18 @@
         left: 60%;
         position: absolute;
     }
+    .welcome-txt {
+        width: rem(160);
+        height: rem(68);
+        background: url('../img/bubble.png') no-repeat;
+        background-size: contain;
+        text-align: center;
+        line-height: rem(60);
+        font-size: rem(32);
+        position: absolute;
+        top: 48.5%;
+        right: 10%;
+        margin-left:rem(80);
+        z-index:99;
+      }
 }

@@ -23,12 +23,52 @@
         right:0;
         height:52%;
     }
-    .car{
+/*    .car{
         position:absolute;
         top:29%;
         left:rem(8);
         height:15%;
         z-index:99;
+    }*/
+    .car{
+        position:absolute;
+        top:29%;
+        left:rem(-100);
+        height:15%;
+        z-index:99;
+
+      audio {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+
+      .car-sw {
+        line-height: 0;
+        height: 100%;
+
+        .open {
+          display: none;
+        }
+
+        .close {
+          display: block;
+        }
+
+        &.open {
+          .open {
+            display: block;
+          }
+
+          .close {
+            display: none;
+          }
+        }
+      }
+
+      img {
+        height: 100%;
+      }
     }
     .street_signs{
         width:rem(49);
@@ -39,7 +79,19 @@
     .com_btn{
         bottom:10%;
     }
-
+    .welcome-txt {
+        width: rem(160);
+        height: rem(68);
+        background: url('../img/bubble.png') no-repeat;
+        background-size: contain;
+        text-align: center;
+        line-height: rem(60);
+        font-size: rem(32);
+        position: absolute;
+        top: 22%;
+        right: 8%;
+        margin-left:rem(80);
+    }
     /*横线*/
     .line8_6{
         position:absolute;

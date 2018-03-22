@@ -1,9 +1,12 @@
 @import "./base/_base";
 
 .page8{
+    height:100%;
+    width:100%;
+    background:$color-base;
     .foot8{
         position:absolute;
-        bottom:-8%;
+        bottom:-7%;
         left:0;
         width:100%;
     }
@@ -121,10 +124,49 @@
             margin-left:rem(30);
         }
     }
-    .car8{
+    /*.car8{
         position:absolute;
-        top:36%;
+        top:38%;
         left:rem(137);
-        width:rem(374);
+        height:15%;
+    }*/
+    .car {
+      position:absolute;
+        top:38%;
+        left:rem(-120);
+        height:15%;
+
+      audio {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+
+      .car-sw {
+        line-height: 0;
+        height: 100%;
+
+        .open {
+          display: none;
+        }
+
+        .close {
+          display: block;
+        }
+
+        &.open {
+          .open {
+            display: block;
+          }
+
+          .close {
+            display: none;
+          }
+        }
+      }
+
+      img {
+        height: 100%;
+      }
     }
 }

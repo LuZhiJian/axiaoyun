@@ -28,6 +28,9 @@
     <img src="../img/moon.png" class="moon" alt="" />
     <img src="../img/Group.png" class="group" alt="" />
     <img src="../img/guitar.png" class="guitar" alt="" />
+    <div class="welcome-txt">
+      未来式!
+    </div>
     <!-- 一堆堆横线 -->
     <div class="line8_6">      
       <img src="../img/tree.png" class="tree8" alt="">
@@ -79,11 +82,25 @@
       <span class="line line8_4_2"></span>
     </div>
 
-    <img src="../img/car_close.png" class="car" alt="" />
+    <!-- <img src="../img/car_close.png" class="car" alt="" />     -->
+    <div class="car" id="car">
+      <div class="car-sw">
+        <img src="../img/car_close.png" class="close">
+        <img src="../img/car_open.png" class="open">
+      </div>
+      <audio controls id="audio">
+        <source src="../media/open.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+      </audio>
+    </div>
     <div class="com_btn">
         <a href="javascript:;" class="btn btn_yes">捡</a>
         <a href="javascript:;" class="btn btn_no">不捡</a>
     </div>
 </div>
+
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/jquery.easings.min.js"></script>
+<script type="text/javascript" src="../js/page6.js"></script>
 </body>
 </html>
