@@ -204,9 +204,8 @@ a:focus {
 /*黑色线条*/
 
 .line {
-  /*background: #0d0d0d;*/
-  /*height: rem(2.5);*/
-  border-top: 0.05rem solid #0d0d0d;
+  background: #0d0d0d;
+  height: 2px;
   display: block;
 }
 
@@ -257,7 +256,7 @@ a:focus {
   height: 100%;
 }
 
-.page2 {
+.main-wrapper .page-9 {
   width: 100%;
   height: 100%;
   background: url("../img/point_bg.png") no-repeat;
@@ -265,143 +264,104 @@ a:focus {
   position: relative;
 }
 
-.page2 .top-part {
+.main-wrapper .top-part {
   width: 100%;
-  height: 85%;
-  background: url("../img/part2-top-bg.png") no-repeat;
-  background-size: contain;
-  background-position: top left;
+  height: 60%;
+  background: url("../img/part9-top-bg.png") no-repeat;
+  background-size: 100% auto;
   position: relative;
 }
 
-.page2 .top-part .house {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 8.75rem;
-  height: 35%;
-  background: url("../img/floor01.png") no-repeat;
-  background-size: contain;
-  -webkit-animation-name: twinkle;
-  -webkit-animation-duration: 6s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: twinkle;
-  animation-duration: 6s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.page2 .top-part .cloud {
-  width: 5.8rem;
-  position: absolute;
-  top: 5%;
-  right: 0;
-  line-height: 0;
-}
-
-.page2 .top-part .cloud img {
+.main-wrapper .top-part .agian-line {
   width: 100%;
-}
-
-.page2 .top-part .car {
-  width: 9.25rem;
-  position: absolute;
-  top: 12.8rem;
-  left: -9.5rem;
-}
-
-.page2 .top-part .car audio {
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
-.page2 .top-part .car .car-sw {
-  line-height: 0;
-  width: 100%;
-}
-
-.page2 .top-part .car .car-sw .open {
-  display: none;
-}
-
-.page2 .top-part .car .car-sw .close {
-  display: block;
-}
-
-.page2 .top-part .car .car-sw.open .open {
-  display: block;
-}
-
-.page2 .top-part .car .car-sw.open .close {
-  display: none;
-}
-
-.page2 .top-part .car img {
-  width: 100%;
-}
-
-.page2 .top-part .welcome {
-  width: 1.5rem;
-  position: absolute;
-  top: 15.35rem;
-  left: 12.25rem;
-}
-
-.page2 .top-part .welcome .sign {
-  width: 100%;
-  height: 100%;
-  line-height: 0;
-  position: relative;
-}
-
-.page2 .top-part .welcome img {
-  width: 100%;
-}
-
-.page2 .top-part .welcome .welcome-txt {
-  width: 4rem;
-  height: 1.7rem;
-  background: url("../img/bubble.png") no-repeat;
-  background-size: contain;
   text-align: center;
-  line-height: 1.35rem;
-  font-size: 0.8rem;
   position: absolute;
-  top: -1.95rem;
-  left: 50%;
-  display: none;
-  margin-left: -2rem;
+  bottom: 0.75rem;
 }
 
-.page2 .top-part .bottle {
-  width: 4.175rem;
+.main-wrapper .top-part .agian-line a {
+  width: 7.5rem;
+  height: 2rem;
+  display: inline-block;
+  background: #286E97;
+  border: 0.05rem solid #000000;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  color: #FFFBEA;
+  text-align: center;
+  line-height: 1.9rem;
+}
+
+.main-wrapper .bottom-part {
+  width: 100%;
+  height: 40%;
+  background-color: #fffbea;
+  position: relative;
+  padding-top: 1.25rem;
+}
+
+.main-wrapper .bottom-part .left-tree,
+.main-wrapper .bottom-part .right-tree {
   line-height: 0;
   position: absolute;
-  top: 75%;
-  left: 11.325rem;
-  -webkit-animation-name: upToDown;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: upToDown;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
-.page2 .top-part .bottle img {
+.main-wrapper .bottom-part .left-tree img,
+.main-wrapper .bottom-part .right-tree img {
   width: 100%;
 }
 
-.page2 .bottom-part {
-  width: 100%;
-  height: 15%;
-  display: block;
-  z-index: 99;
+.main-wrapper .bottom-part .left-tree {
+  width: 3.075rem;
+  left: 0;
+  top: 1.25rem;
 }
 
-.page2 .bottom-part .com_btn {
-  position: static;
+.main-wrapper .bottom-part .right-tree {
+  width: 1.85rem;
+  right: 0;
+  top: 5.25rem;
+}
+
+.main-wrapper .bottom-part h4 {
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #0C0C0C;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.main-wrapper .bottom-part .qrcode {
+  line-height: 0;
+  width: 4rem;
+  margin: 5% auto 0;
+}
+
+.main-wrapper .bottom-part .qrcode img {
+  width: 100%;
+}
+
+.main-wrapper .bottom-part .to-store {
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-top: 4%;
+}
+
+.main-wrapper .bottom-part .to-store a {
+  color: #286E97;
+}
+
+.main-wrapper .bottom-part .logo {
+  width: 6.35rem;
+  line-height: 0;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -3.175rem;
+}
+
+.main-wrapper .bottom-part .logo img {
+  width: 100%;
 }

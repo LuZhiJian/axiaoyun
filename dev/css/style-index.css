@@ -148,6 +148,28 @@ q:before {
   }
 }
 
+@keyframes twinkle {
+  0% {
+    background-image: url("../img/floor01.png");
+  }
+
+  25% {
+    background-image: url("../img/floor02.png");
+  }
+
+  50% {
+    background-image: url("../img/floor01.png");
+  }
+
+  75% {
+    background-image: url("../img/floor02.png");
+  }
+
+  100% {
+    background-image: url("../img/floor01.png");
+  }
+}
+
 .main-wrapper {
   width: 100%;
   max-width: 750px;
@@ -192,34 +214,42 @@ a:focus {
 
 .com_btn {
   position: absolute;
+  width: 100%;
+  text-align: center;
   bottom: 3.3rem;
-  margin-left: 2.9rem;
+  font-size: 0;
 }
 
 .com_btn .btn {
   display: inline-block;
   width: 5.9rem;
-  background: #286e97;
   height: 1.9rem;
   line-height: 1.75rem;
   border: 2px solid #000;
   border-radius: 0.3rem;
-  text-align: center;
   color: #fff;
   font-size: 1.125rem;
+  margin: 0rem 0.5rem;
 }
 
 .com_btn .btn_no {
   background: #cd4c43;
-  margin-left: 1rem;
 }
 
+.com_btn .btn_no:hover,
 .com_btn .btn_no:active {
   background: #b03e37;
+  transition: 0.5s;
 }
 
+.com_btn .btn_yes {
+  background-color: #286e97;
+}
+
+.com_btn .btn_yes:hover,
 .com_btn .btn_yes:active {
   background: #1e5b7f;
+  transition: 0.5s;
 }
 
 .main-wrapper {
@@ -240,7 +270,7 @@ a:focus {
 }
 
 .main-wrapper .img-box img {
-  width: 100%;
+  height: 100%;
 }
 
 .main-wrapper .logo {
@@ -250,41 +280,45 @@ a:focus {
 
 .main-wrapper .logo img {
   width: 6.5rem;
+  height: auto;
 }
 
 .main-wrapper .cloud {
-  width: 7.3rem;
+  height: 15%;
+  max-height: 5.1rem;
   position: absolute;
   top: 2.25rem;
   right: 0;
 }
 
 .main-wrapper .moon {
-  width: 8.6rem;
+  height: 24%;
+  max-height: 8.2rem;
   position: absolute;
   top: 3.65rem;
   left: 0;
 }
 
 .main-wrapper .tree-1 {
-  width: 0.96rem;
+  height: 6%;
   position: absolute;
-  top: 8.75rem;
+  top: 8.5rem;
   right: 5.675rem;
 }
 
 .main-wrapper .tree-2 {
-  width: 0.8rem;
+  height: 5%;
   position: absolute;
-  top: 12.7rem;
+  top: 12.2rem;
   right: 1.6rem;
 }
 
 .main-wrapper .maps-wrap {
   height: 50%;
+  max-height: 18.15rem;
   position: absolute;
-  bottom: 3.55rem;
-  right: 2.35rem;
+  top: 37%;
+  right: 10%;
   z-index: 2;
 }
 
@@ -295,25 +329,26 @@ a:focus {
 }
 
 .main-wrapper .maps-wrap .maps {
-  width: auto;
+  width: 100%;
   height: 100%;
   line-height: 0;
 }
 
 .main-wrapper .maps-wrap .maps img {
+  width: auto;
   height: 100%;
 }
 
 .main-wrapper .maps-wrap .car {
-  width: 4.4rem;
+  height: 10%;
   position: absolute;
-  top: 8.25rem;
-  right: -1.5rem;
+  top: 55%;
+  right: -0.75rem;
 }
 
 .main-wrapper .footer {
   width: 100%;
-  height: 11.8rem;
+  height: 35%;
   background-color: #fffbea;
   position: absolute;
   border-top: 2px solid #666;
@@ -344,9 +379,9 @@ a:focus {
 }
 
 .main-wrapper .footer .hands {
-  width: 2.15rem;
+  height: 20%;
   position: absolute;
-  top: 5.7rem;
+  top: 48%;
   right: 1.65rem;
 }
 
@@ -365,7 +400,7 @@ a:focus {
   font-size: 0;
   white-space: nowrap;
   position: absolute;
-  top: 8.4rem;
+  top: 72%;
   right: 0;
   padding: 0rem 0.75rem;
 }

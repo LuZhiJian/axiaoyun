@@ -41,29 +41,38 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
 /*贱不贱按钮*/
 .com_btn{
   position: absolute;
+  width: 100%;
+  text-align: center;
   bottom:rem(132);
-  margin-left:rem(116);
+  font-size: 0;
 
   .btn{
     display: inline-block;
     width: rem(236);
-    background: $color-blue;
     height: rem(76);
     line-height: rem(70);
     border: 2px solid #000;
     border-radius: rem(12);
-    text-align: center;
     color: #fff;
     font-size: rem(45);
+    margin: rem(0, 20);
   }
-  .btn_no{
-      background: $color-orange;
-      margin-left:rem(40);
-  }
-  .btn_no:active{
+
+  .btn_no {
+    background: $color-orange;
+
+    &:hover, &:active {
       background: $color-orange-hover;
+      @include transition(.5s);
+    }
   }
-  .btn_yes:active{
+
+  .btn_yes {
+    background-color: $color-blue;
+
+    &:hover, &:active {
       background: $color-blue-hover;
+      @include transition(.5s);
+    }
   }
 }
