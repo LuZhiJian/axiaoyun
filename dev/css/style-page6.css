@@ -182,8 +182,9 @@ a:focus {
 /*黑色线条*/
 
 .line {
-  background: #0d0d0d;
-  height: 2px;
+  /*background: #0d0d0d;*/
+  /*height: rem(2.5);*/
+  border-top: 0.05rem solid #0d0d0d;
   display: block;
 }
 
@@ -224,15 +225,38 @@ a:focus {
 .page6 {
   height: 100%;
   width: 100%;
-  background: url(../img/H5_part06.jpg) no-repeat;
-  background-size: 100% auto;
+  background: #fffbea;
+  /*横线*/
+}
+
+.page6 .moon {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  height: 16%;
+  z-index: 99;
+}
+
+.page6 .group {
+  position: absolute;
+  top: 53%;
+  left: 0;
+  height: 24%;
+}
+
+.page6 .guitar {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  height: 52%;
 }
 
 .page6 .car {
   position: absolute;
-  top: 9.775rem;
+  top: 29%;
   left: 0.2rem;
-  width: 9.35rem;
+  height: 15%;
+  z-index: 99;
 }
 
 .page6 .street_signs {
@@ -240,4 +264,180 @@ a:focus {
   position: absolute;
   top: 3.175rem;
   right: 3.675rem;
+}
+
+.page6 .com_btn {
+  bottom: 10%;
+}
+
+.page6 .line8_6 {
+  position: absolute;
+  top: 23%;
+  left: 7.775rem;
+  width: 3.5rem;
+}
+
+.page6 .line8_6 .line8_6_1 {
+  width: 2.425rem;
+}
+
+.page6 .line8_6 .line8_6_2 {
+  width: 2.45rem;
+  margin: 0.3rem 0 0 1.025rem;
+}
+
+.page6 .line8_6 .tree8 {
+  width: 0.975rem;
+  margin-left: 0.7rem;
+}
+
+.page6 .line8_7 {
+  position: absolute;
+  top: 12%;
+  right: 2.5rem;
+  width: 3.75rem;
+}
+
+.page6 .line8_7 .line8_7_1 {
+  width: 2.5rem;
+  float: left;
+}
+
+.page6 .line8_7 .line8_7_2 {
+  width: 0.275rem;
+  float: left;
+  margin-left: 0.25rem;
+}
+
+.page6 .line8_7 .line8_7_3 {
+  width: 2.5rem;
+  float: right;
+  margin-top: 0.35rem;
+}
+
+.page6 .line8_7 .line8_7_4 {
+  width: 0.275rem;
+  float: right;
+  margin-top: 0.45rem;
+  margin-left: 0.25rem;
+}
+
+.page6 .line8_7 .street_signs8 {
+  width: 1.225rem;
+  margin-left: 0.75rem;
+}
+
+.page6 .line8_8 {
+  position: absolute;
+  top: 44%;
+  left: 0;
+  width: 0.8rem;
+}
+
+.page6 .line8_8 .line8_8_1 {
+  width: 0.8rem;
+  float: left;
+}
+
+.page6 .line8_9 {
+  position: absolute;
+  bottom: 20%;
+  right: 2.5rem;
+  width: 3rem;
+}
+
+.page6 .line8_9 .line8_9_1 {
+  width: 2.45rem;
+  float: right;
+}
+
+.page6 .line8_9 .line8_9_2 {
+  width: 2.45rem;
+  float: left;
+  margin-top: 0.35rem;
+}
+
+.page6 .line8_5 {
+  position: absolute;
+  top: 45%;
+  right: 4.175rem;
+  width: 3rem;
+}
+
+.page6 .line8_5 .line8_5_1 {
+  width: 2.45rem;
+  float: left;
+}
+
+.page6 .line8_5 .line8_5_2 {
+  width: 2.45rem;
+  float: right;
+  margin-top: 0.35rem;
+}
+
+.page6 .line8_4 {
+  position: absolute;
+  top: 10%;
+  left: 4.675rem;
+  width: 2.5rem;
+}
+
+.page6 .line8_4 .line8_4_1 {
+  width: 1.375rem;
+  float: left;
+}
+
+.page6 .line8_4 .line8_4_2 {
+  width: 2.5rem;
+  float: left;
+  margin-top: 0.35rem;
+}
+
+.page6 .line8_1 {
+  position: absolute;
+  top: 44%;
+  left: 2.7rem;
+  width: 3.75rem;
+}
+
+.page6 .line8_1 .line8_1_1 {
+  width: 2.5rem;
+  float: left;
+}
+
+.page6 .line8_1 .line8_1_2 {
+  width: 0.35rem;
+  float: left;
+  margin-left: 0.25rem;
+}
+
+.page6 .line8_1 .line8_1_3 {
+  width: 2.5rem;
+  float: right;
+  margin-top: 0.35rem;
+}
+
+.page6 .line8_1 .line8_1_4 {
+  width: 0.35rem;
+  float: right;
+  margin-top: 0.45rem;
+  margin-left: 0.25rem;
+}
+
+.page6 .line8_t1 {
+  top: 62%;
+  left: 10.375rem;
+}
+
+.page6 .line8_t2 {
+  top: auto;
+  left: 0;
+  bottom: 3%;
+}
+
+.page6 .line8_t3 {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 6%;
 }

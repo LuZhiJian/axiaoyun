@@ -182,8 +182,9 @@ a:focus {
 /*黑色线条*/
 
 .line {
-  background: #0d0d0d;
-  height: 2px;
+  /*background: #0d0d0d;*/
+  /*height: rem(2.5);*/
+  border-top: 0.05rem solid #0d0d0d;
   display: block;
 }
 
@@ -224,21 +225,125 @@ a:focus {
 .page3 {
   height: 100%;
   width: 100%;
-  background: url(../img/H5_part03.jpg) no-repeat;
-  background-size: 100% auto;
-  background-position: center center;
+  background: #fffbea;
+}
+
+.page3 .square {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  height: 18%;
+}
+
+.page3 .cd02 {
+  position: absolute;
+  top: 51%;
+  left: -1.375rem;
+  height: 21%;
+}
+
+.page3 .square02 {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  height: 19%;
+}
+
+.page3 .piano {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 26%;
 }
 
 .page3 .car {
   position: absolute;
-  top: 10.925rem;
-  left: 2.95rem;
-  width: 9.35rem;
+  top: 30%;
+  left: 0.2rem;
+  height: 15%;
+  z-index: 99;
 }
 
-.page3 .cd {
+.page3 .com_btn {
+  bottom: 10%;
+}
+
+.page3 .line8_1 {
   position: absolute;
-  top: 18.75rem;
-  left: -1.125rem;
-  width: 5.4rem;
+  width: 3.75rem;
+}
+
+.page3 .line8_1 .line8_1_1 {
+  width: 2.5rem;
+  float: left;
+}
+
+.page3 .line8_1 .line8_1_2 {
+  width: 0.35rem;
+  float: left;
+  margin-left: 0.25rem;
+}
+
+.page3 .line8_1 .line8_1_3 {
+  width: 2.5rem;
+  float: right;
+  margin-top: 0.35rem;
+}
+
+.page3 .line8_1 .line8_1_4 {
+  width: 0.35rem;
+  float: right;
+  margin-top: 0.45rem;
+  margin-left: 0.25rem;
+}
+
+.page3 .line8_t1 {
+  top: 3%;
+  left: 5.375rem;
+}
+
+.page3 .line8_t2 {
+  top: 23%;
+  left: 9.25rem;
+}
+
+.page3 .line8_t3 {
+  top: 45%;
+  left: 0;
+}
+
+.page3 .line8_t4 {
+  top: 56%;
+  left: 10.9rem;
+}
+
+.page3 .line8_t5 {
+  bottom: 18%;
+  left: 6.575rem;
+}
+
+.page3 .line8_t6 {
+  bottom: 5%;
+  left: 0.55rem;
+}
+
+.page3 .line8_t7 {
+  bottom: 3%;
+  right: 2rem;
+}
+
+.page3 .line8_t8 {
+  top: 45%;
+  left: 9.7rem;
+}
+
+.page3 .line8_t9 {
+  top: 132%;
+  left: 11.85rem;
+}
+
+.page3 .line8_d1 {
+  top: 8%;
+  right: 0;
+  width: 3.1rem;
 }
