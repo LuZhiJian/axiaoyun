@@ -9,22 +9,35 @@
 <meta name="apple-mobile-web-app-capable" content="no" />
 <meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" type="text/css" href="../css/style-page3.css" />
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
-  function setRootSize() {
-    var docWid = window.document.documentElement,
-      width = docWid.getBoundingClientRect().width,
-      fontSize = (width >= 750) ? 40 : width / 750 * 40;
-    docWid.style.fontSize = fontSize + 'px';
-  }
-  window.addEventListener('resize', function() {
+  $(function(){    
+    function setRootSize() {
+      var docWid = window.document.documentElement,
+        width = docWid.getBoundingClientRect().width,
+        fontSize = (width >= 750) ? 40 : width / 750 * 40;
+      docWid.style.fontSize = fontSize + 'px';
+      var w = $(window).width();
+      var h_z = $(window).height();
+      var h_j = w*1334/750;
+      var h_d = (h_z-h_j)/2;
+      $(".calcH").each(function(index, el) {
+        var top = ($(el).position().top - h_d)+"px";
+      console.log(h_d)
+        $(el).css("top",top);
+      });
+    }
+    window.addEventListener('resize', function() {
+      setRootSize();
+    }, false);
     setRootSize();
-  }, false);
-  setRootSize();
+  })
+
 </script>
 </head>
 <body>
 <div class="main-wrapper page3">
-    <img src="../img/car_close.png" class="car" alt="" />
+    <img src="../img/car_close.png" class="car calcH" alt="" />
     <img src="../img/CD.png" class="cd" alt="" />
     <div class="com_btn">
         <a href="javascript:;" class="btn btn_yes">捡</a>

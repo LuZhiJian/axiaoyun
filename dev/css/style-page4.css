@@ -209,11 +209,16 @@ a:focus {
   width: 100%;
   background: url(../img/H5_part04.jpg) no-repeat;
   background-size: 100% auto;
+  background-position: center center;
 }
 
 .page4 .car {
   position: absolute;
-  top: 2.525rem;
+  top: 8%;
   left: 0.45rem;
   width: 9.35rem;
+}
+
+.page4 .com_btn {
+  bottom: 6%;
 }
