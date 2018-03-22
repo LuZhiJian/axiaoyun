@@ -1,0 +1,435 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+address,
+b,
+caption,
+cite,
+code,
+dfn,
+em,
+i,
+optgroup,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+button,
+input,
+optgroup,
+textarea {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+code,
+kbd,
+samp,
+tt {
+  font-size: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  *font-size: 100%;
+}
+
+body {
+  color: #333;
+  font: 12px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+sub,
+sup {
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+:link,
+:visited,
+del,
+ins {
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:link,
+a:visited {
+  border: 0 none;
+  background: none;
+  color: #333;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  color: #ed1c24;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+@keyframes upToDown {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    -webkit-transform: translate(0px, -10px);
+    transform: translate(0px, -10px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+}
+
+.main-wrapper {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+html,
+body {
+  height: 100%;
+  background: #fffbea;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  display: block;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+/*黑色线条*/
+
+.line {
+  background: #0d0d0d;
+  height: 2px;
+  display: block;
+}
+
+/*贱不贱按钮*/
+
+.com_btn {
+  position: absolute;
+  bottom: 3.3rem;
+  margin-left: 2.9rem;
+}
+
+.com_btn .btn {
+  display: inline-block;
+  width: 5.9rem;
+  background: #286e97;
+  height: 1.9rem;
+  line-height: 1.75rem;
+  border: 2px solid #000;
+  border-radius: 0.3rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.com_btn .btn_no {
+  background: #cd4c43;
+  margin-left: 1rem;
+}
+
+.com_btn .btn_no:active {
+  background: #b03e37;
+}
+
+.com_btn .btn_yes:active {
+  background: #1e5b7f;
+}
+
+.page6 {
+  height: 100%;
+  width: 100%;
+  background-color: #FEFBE7;
+}
+
+.page6 .z-i {
+  z-index: 10;
+}
+
+.page6 .point_box {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 5;
+}
+
+.page6 .point_box .point_bg {
+  width: 100%;
+  height: auto;
+}
+
+.page6 .cloud_box {
+  width: 100%;
+  height: 24%;
+  top: 0;
+  position: absolute;
+}
+
+.page6 .cloud_box .cloud1 {
+  top: 24%;
+  left: 0;
+  width: 24%;
+  height: auto;
+  position: absolute;
+}
+
+.page6 .cloud_box .sandbag {
+  top: 0;
+  left: 35%;
+  width: 30%;
+  height: auto;
+  position: absolute;
+}
+
+.page6 .cloud_box .cloud2 {
+  top: 60%;
+  right: 0;
+  width: 19%;
+  height: auto;
+  position: absolute;
+}
+
+.page6 .boxer_box {
+  width: 100%;
+  height: 46%;
+  top: 24%;
+  position: absolute;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.page6 .boxer_box .boxer1 {
+  width: 40%;
+  height: auto;
+  display: inline-block;
+}
+
+.page6 .boxer_box .boxer2 {
+  width: 40%;
+  height: auto;
+  margin-left: 20%;
+  display: inline-block;
+}
+
+.page6 .boxer_box .line5_1_1 {
+  width: 2.75rem;
+  position: absolute;
+  top: 86%;
+  left: 33%;
+}
+
+.page6 .boxer_box .line5_1_2 {
+  width: 2.75rem;
+  position: absolute;
+  top: 86%;
+  right: 20%;
+}
+
+.page6 .tree_box {
+  width: 100%;
+  height: 9%;
+  top: 70%;
+  position: absolute;
+}
+
+.page6 .tree_box .tree {
+  width: 5%;
+  height: auto;
+  top: 0%;
+  left: 28%;
+  position: absolute;
+}
+
+.page6 .tree_box .line5_2_1 {
+  width: 2rem;
+  top: 47%;
+  left: 26.5%;
+  position: absolute;
+}
+
+.page6 .tree_box .line5_2_2 {
+  width: 2rem;
+  bottom: 0;
+  left: 60%;
+  position: absolute;
+}
+
+.page6 .tree_box .line5_2_3 {
+  width: 0.5rem;
+  bottom: 0;
+  left: 72%;
+  position: absolute;
+}
+
+.page6 .btn_box {
+  top: 79%;
+  width: 100%;
+  height: 21%;
+  bottom: 0;
+  margin-left: 0;
+}
+
+.page6 .btn_box .btn_yes {
+  top: 15%;
+  left: 15.5%;
+  position: absolute;
+}
+
+.page6 .btn_box .btn_no {
+  top: 15%;
+  right: 15.5%;
+  position: absolute;
+}
+
+.page6 .btn_box .line5_3_1 {
+  width: 2.5rem;
+  top: 50%;
+  left: 10%;
+  position: absolute;
+}
+
+.page6 .btn_box .line5_3_2 {
+  width: 0.5rem;
+  top: 50%;
+  left: 25%;
+  position: absolute;
+}
+
+.page6 .btn_box .line5_3_3 {
+  width: 1.75rem;
+  top: 60%;
+  left: 6%;
+  position: absolute;
+}
+
+.page6 .btn_box .line5_3_4 {
+  width: 2rem;
+  top: 60%;
+  right: 16%;
+  position: absolute;
+}
+
+.page6 .btn_box .line5_3_5 {
+  width: 0.5rem;
+  top: 60%;
+  right: 13%;
+  position: absolute;
+}
+
+.page6 .btn_box .line5_3_6 {
+  width: 2rem;
+  top: 70%;
+  right: 13%;
+  position: absolute;
+}
+
+.page6 .btn_box .line5_3_7 {
+  width: 0.5rem;
+  top: 70%;
+  right: 10%;
+  position: absolute;
+}
+
+.page6 .car {
+  width: 50%;
+  height: auto;
+  z-index: 15;
+  top: 50%;
+  left: 4%;
+  position: absolute;
+}
+
+.page6 .bottle {
+  width: 20%;
+  height: auto;
+  z-index: 15;
+  top: 67.2%;
+  left: 60%;
+  position: absolute;
+}

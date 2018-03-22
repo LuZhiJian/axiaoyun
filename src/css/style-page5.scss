@@ -1,0 +1,189 @@
+@import "./base/_base";
+
+.page6{
+    height:100%;
+    width:100%;
+    background-color: #FEFBE7;
+    .z-i{
+        z-index: 10;
+    }
+    .point_box{
+        width: 100%;
+        height: 60%;
+        overflow: hidden;
+        position: absolute;
+        z-index: 5;
+       .point_bg{
+            width: 100%;
+            height: auto;
+        } 
+    }
+    .cloud_box{
+        width: 100%;
+        height: 24%;
+        top: 0;
+        position: absolute;
+        .cloud1{
+            top: 24%;
+            left: 0;
+            width: 24%;
+            height: auto;
+            position: absolute;
+        }
+        .sandbag{
+            top: 0;
+            left: 35%;
+            width: 30%;
+            height: auto;
+            position: absolute;
+        }
+        .cloud2{
+            top: 60%;
+            right: 0;
+            width: 19%;
+            height: auto;
+            position:absolute;
+        }
+    }
+    .boxer_box{
+        width: 100%;
+        height: 46%;
+        top: 24%;
+        position: absolute;
+        white-space: nowrap;
+        font-size: 0;
+        .boxer1{
+            width: 40%;
+            height: auto;
+            display: inline-block;
+        }
+        .boxer2{
+            width: 40%;
+            height: auto;
+            margin-left: 20%;
+            display: inline-block;
+        }
+        .line5_1_1{
+            width: rem(110);
+            position: absolute;
+            top: 86%;
+            left: 33%;
+        }
+        .line5_1_2{
+            width: rem(110);
+            position: absolute;
+            top: 86%;
+            right: 20%;
+        }
+    }
+    
+    .tree_box{
+        width: 100%;
+        height: 9%;
+        top: 70%;
+        position: absolute;
+        .tree{
+            width: 5%;
+            height: auto;
+            top: 0%;
+            left: 28%;
+            position: absolute;
+        }
+        .line5_2_1{
+            width: rem(80);
+            top: 47%;
+            left: 26.5%;
+            position: absolute;
+        }
+        .line5_2_2{
+            width: rem(80);
+            bottom: 0;
+            left: 60%;
+            position: absolute;
+        }
+        .line5_2_3{
+            width: rem(20);
+            bottom: 0;
+            left: 72%;
+            position: absolute;
+        }
+    }
+    
+    .btn_box{
+        top: 79%;
+        width: 100%;
+        height: 21%;
+        bottom: 0;
+        margin-left: 0;
+        .btn_yes{
+            top: 15%;
+            left: 15.5%;
+            position: absolute;
+        }
+        .btn_no{
+            top: 15%;
+            right: 15.5%;
+            position: absolute;
+        }
+        .line5_3_1{
+           width: rem(100);
+           top: 50%;
+           left: 10%;
+           position: absolute; 
+        }
+        .line5_3_2{
+           width: rem(20);
+           top: 50%;
+           left: 25%;
+           position: absolute; 
+        }
+        .line5_3_3{
+           width: rem(70);
+           top: 60%;
+           left: 6%;
+           position: absolute; 
+        }
+        .line5_3_4{
+           width: rem(80);
+           top: 60%;
+           right: 16%;
+           position: absolute; 
+        }
+        .line5_3_5{
+           width: rem(20);
+           top: 60%;
+           right: 13%;
+           position: absolute; 
+        }
+        .line5_3_6{
+           width: rem(80);
+           top: 70%;
+           right: 13%;
+           position: absolute; 
+        }
+        .line5_3_7{
+           width: rem(20);
+           top: 70%;
+           right: 10%;
+           position: absolute; 
+        }
+    }
+    
+    .car{
+        width: 50%;
+        height: auto;
+        z-index: 15;
+        top: 50%;
+        left: 4%;
+        position: absolute;
+    }
+    
+    .bottle{
+        width: 20%;
+        height: auto;
+        z-index: 15;
+        top: 67.2%;
+        left: 60%;
+        position: absolute;
+    }
+}
