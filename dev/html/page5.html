@@ -25,21 +25,26 @@
 <body>
 <div class="main-wrapper page6">
 		<div class="point_box">
-			<img src="../img/point_bg@2x.png" class="point_bg" alt="" />
+			<img src="../img/point_bg.png" class="point_bg" alt="" />
 		</div>
 		<div class="cloud_box z-i">
-			<img src="../img/cloud01@2x.png" class="cloud1" alt="" />
-			<img src="../img/sandbag@2x.png" class="sandbag" alt="" />
-			<img src="../img/cloud02@2x.png" class="cloud2" alt="" />
+			<img src="../img/cloud01.png" class="cloud1" alt="" />
+			<img src="../img/sandbag.png" class="sandbag" alt="" />
+			<img src="../img/cloud02.png" class="cloud2" alt="" />
 		</div>
-		<div class="boxer_box z-i">
-			<img src="../img/boxer@2x.png" class="boxer1" alt="" />
-    	<img src="../img/boxer02@2x.png" class="boxer2" alt="" />
+    <div class="welcome-txt">
+      进行式!
+    </div>
+    <img src="../img/boxer.png" class="boxer1" alt="" />
+    <img src="../img/boxer02.png" class="boxer2" alt="" />
+    <span class="line line5_1_1"></span>
+    <span class="line line5_1_2"></span>
+		<!-- <div class="boxer_box z-i">
     	<span class="line line5_1_1"></span>
     	<span class="line line5_1_2"></span>
-		</div>
+		</div> -->
 		<div class="tree_box  z-i">
-			<img src="../img/tree@2x.png" class="tree" alt="" />
+			<img src="../img/tree.png" class="tree" alt="" />
 			<span class="line line5_2_1"></span>
 			<span class="line line5_2_2"></span>
 			<span class="line line5_2_3"></span>
@@ -55,8 +60,21 @@
         <span class="line line5_3_6"></span>
         <span class="line line5_3_7"></span>
     </div>
-    <img src="../img/car_close@2x.png" class="car" alt="" />
-    <img src="../img/drifting bottle@2x.png" class="bottle" alt="" />
+    <div class="car" id="car">
+      <div class="car-sw">
+        <img src="../img/car_close.png" class="close">
+        <img src="../img/car_open.png" class="open">
+      </div>
+      <audio controls id="audio">
+        <source src="../media/open.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+      </audio>
+    </div>
+    <!-- <img src="../img/drifting bottle.png" class="bottle" alt="" /> -->
 </div>
+
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/jquery.easings.min.js"></script>
+<script type="text/javascript" src="../js/page5.js"></script>
 </body>
 </html>
