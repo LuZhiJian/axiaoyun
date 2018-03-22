@@ -170,6 +170,20 @@ q:before {
   }
 }
 
+@keyframes showHide {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 .main-wrapper {
   width: 100%;
   max-width: 750px;
@@ -204,10 +218,27 @@ a:focus {
 /*黑色线条*/
 
 .line {
-  /*background: #0d0d0d;*/
-  /*height: rem(2.5);*/
   border-top: 0.05rem solid #0d0d0d;
   display: block;
+  position: relative;
+}
+
+.line.doc-left:after,
+.line.doc-right:after {
+  content: '';
+  display: block;
+  width: 0.375rem;
+  border-top: 0.15rem solid #fffbea;
+  position: absolute;
+  bottom: -0.05rem;
+}
+
+.line.doc-left:after {
+  left: 0.375rem;
+}
+
+.line.doc-right:after {
+  right: 0.375rem;
 }
 
 /*贱不贱按钮*/
@@ -250,6 +281,16 @@ a:focus {
 .com_btn .btn_yes:active {
   background: #1e5b7f;
   transition: 0.5s;
+}
+
+.welcome-txt {
+  width: 4rem;
+  height: 1.7rem;
+  background: url("../img/bubble.png") no-repeat;
+  background-size: contain;
+  text-align: center;
+  line-height: 1.35rem;
+  font-size: 0.8rem;
 }
 
 .main-wrapper {

@@ -15,6 +15,11 @@
   @include square($len);
 }
 
+//旋转
+@mixin rotate($deg) {
+  transform: rotate($deg);
+}
+
 // 动画时间
 @mixin transition($time) {
   transition: $time;
@@ -92,5 +97,18 @@
   }
   100% {
     background-image: url('../img/floor01.png');
+  }
+}
+
+// 上下浮动动画
+@keyframes showHide {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
   }
 }

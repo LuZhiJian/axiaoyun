@@ -33,10 +33,33 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
 }
 /*黑色线条*/
 .line{
-    /*background: #0d0d0d;*/
-    /*height: rem(2.5);*/
-    border-top:rem(2) solid #0d0d0d;
-    display: block;
+  border-top: rem(2) solid #0d0d0d;
+  display: block;
+  position: relative;
+
+  &.doc-left,
+  &.doc-right {
+    &:after {
+      content: '';
+      display: block;
+      width: rem(15);
+      border-top: rem(6) solid $color-base;
+      position: absolute;
+      bottom: rem(-2);
+    }
+  }
+
+  &.doc-left {
+    &:after {
+      left: rem(15);
+    }
+  }
+
+  &.doc-right {
+    &:after {
+      right: rem(15);
+    }
+  }
 }
 /*贱不贱按钮*/
 .com_btn{
@@ -75,4 +98,14 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
       @include transition(.5s);
     }
   }
+}
+
+.welcome-txt {
+  width: rem(160);
+  height: rem(68);
+  background: url('../img/bubble.png') no-repeat;
+  background-size: contain;
+  text-align: center;
+  line-height: rem(54);
+  font-size: rem(32);
 }
