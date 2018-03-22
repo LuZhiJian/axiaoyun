@@ -148,6 +148,28 @@ q:before {
   }
 }
 
+@keyframes twinkle {
+  0% {
+    background-image: url("../img/floor01.png");
+  }
+
+  25% {
+    background-image: url("../img/floor02.png");
+  }
+
+  50% {
+    background-image: url("../img/floor01.png");
+  }
+
+  75% {
+    background-image: url("../img/floor02.png");
+  }
+
+  100% {
+    background-image: url("../img/floor01.png");
+  }
+}
+
 .main-wrapper {
   width: 100%;
   max-width: 750px;
@@ -191,34 +213,42 @@ a:focus {
 
 .com_btn {
   position: absolute;
+  width: 100%;
+  text-align: center;
   bottom: 3.3rem;
-  margin-left: 2.9rem;
+  font-size: 0;
 }
 
 .com_btn .btn {
   display: inline-block;
   width: 5.9rem;
-  background: #286e97;
   height: 1.9rem;
   line-height: 1.75rem;
   border: 2px solid #000;
   border-radius: 0.3rem;
-  text-align: center;
   color: #fff;
   font-size: 1.125rem;
+  margin: 0rem 0.5rem;
 }
 
 .com_btn .btn_no {
   background: #cd4c43;
-  margin-left: 1rem;
 }
 
+.com_btn .btn_no:hover,
 .com_btn .btn_no:active {
   background: #b03e37;
+  transition: 0.5s;
 }
 
+.com_btn .btn_yes {
+  background-color: #286e97;
+}
+
+.com_btn .btn_yes:hover,
 .com_btn .btn_yes:active {
   background: #1e5b7f;
+  transition: 0.5s;
 }
 
 .page4 {
