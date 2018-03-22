@@ -3,58 +3,66 @@
 @import "./_var";
 @import "./_animate";
 
+$color-base: #fffbea;
+$color-orange: #cd4c43;
+$color-orange-hover: #b03e37;
+$color-blue: #286e97;
+$color-blue-hover: #1e5b7f;
+
 .main-wrapper {
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
 }
 html,body{
-    height:100%;
-    background:#fffbea;   
-    overflow:hidden;
-    position: relative; 
+  height: 100%;
+  background: $color-base;
+  overflow: hidden;
+  position: relative;
 }
+
 img{
-    display:block;
+    display: block;
 }
 a,a:hover,a:active,a:visited,a:link,a:focus{
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
-    outline:none;
+    outline: none;
     background: none;
     text-decoration: none;
 }
 /*黑色线条*/
 .line{
-    background:#0d0d0d;
-    height:2px;
-    display:block;
+    background: #0d0d0d;
+    height: 2px;
+    display: block;
 }
 /*贱不贱按钮*/
 .com_btn{
-    position: absolute;
-    bottom:rem(132);
-    margin-left:rem(116);
-    .btn{
-        display:inline-block;
-        width:rem(236);
-        background:#286e97;
-        height:rem(76);
-        line-height:rem(70);
-        border:2px solid #000;
-        border-radius:rem(12);
-        text-align:center;
-        color:#fff;
-        font-size:rem(45);
-    }
-    .btn_no{
-        background:#cd4c43;
-        margin-left:rem(40);
-    }
-    .btn_no:active{
-        background:#b03e37;
-    }
-    .btn_yes:active{
-        background:#1e5b7f;
-    }
+  position: absolute;
+  bottom:rem(132);
+  margin-left:rem(116);
+
+  .btn{
+    display: inline-block;
+    width: rem(236);
+    background: $color-blue;
+    height: rem(76);
+    line-height: rem(70);
+    border: 2px solid #000;
+    border-radius: rem(12);
+    text-align: center;
+    color: #fff;
+    font-size: rem(45);
+  }
+  .btn_no{
+      background: $color-orange;
+      margin-left:rem(40);
+  }
+  .btn_no:active{
+      background: $color-orange-hover;
+  }
+  .btn_yes:active{
+      background: $color-blue-hover;
+  }
 }
