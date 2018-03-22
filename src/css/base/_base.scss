@@ -33,8 +33,9 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
 }
 /*黑色线条*/
 .line{
-    background: #0d0d0d;
-    height: 2px;
+    /*background: #0d0d0d;*/
+    /*height: rem(2.5);*/
+    border-top:rem(2) solid #0d0d0d;
     display: block;
 }
 /*贱不贱按钮*/

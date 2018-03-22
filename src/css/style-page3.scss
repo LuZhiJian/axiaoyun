@@ -3,19 +3,106 @@
 .page3{
     height:100%;
     width:100%;
-    background:url(../img/H5_part03.jpg) no-repeat;
-    background-size:100% auto;
-    background-position:center center;
+    background:$color-base;
+    .square{
+        position:absolute;
+        top:8%;
+        left:0;
+        height:18%;
+    }
+    .cd02{
+        position:absolute;
+        top:51%;
+        left:rem(-55);
+        height:21%;
+    }
+    .square02{
+        position:absolute;
+        top:60%;
+        right:0;
+        height:19%;
+    }
+    .piano{
+        position:absolute;
+        top:20%;
+        right:0;
+        height:26%;
+    }
     .car{
         position:absolute;
-        top:rem(437);
-        left:rem(118);
-        width:rem(374);
+        top:30%;
+        left:rem(8);
+        height:15%;
+        z-index:99;
     }
-    .cd{
+    .com_btn{
+        bottom:10%;
+    }
+
+
+    .line8_1{
         position:absolute;
-        top:rem(750);
-        left:rem(-45);
-        width:rem(216);
+        width:rem(150);
+        .line8_1_1{
+            width:rem(100);
+            float:left;
+        }
+        .line8_1_2{
+            width:rem(14);
+            float:left;
+            margin-left:rem(10);
+        }
+        .line8_1_3{
+            width:rem(100);
+            float:right;
+            margin-top:rem(14);
+        }
+        .line8_1_4{
+            width:rem(14);
+            float:right;
+            margin-top:rem(18);
+            margin-left:rem(10);
+        }
+    }
+    .line8_t1{
+        top:3%;
+        left:rem(215);
+    }
+    .line8_t2{
+        top:23%;
+        left:rem(370);
+    }
+    .line8_t3{
+        top:45%;
+        left:0;
+    }
+    .line8_t4{
+        top:56%;
+        left:rem(436);
+    }
+    .line8_t5{
+        bottom:18%;
+        left:rem(263);
+    }
+    .line8_t6{
+        bottom:5%;
+        left:rem(22);
+    }
+    .line8_t7{
+        bottom:3%;
+        right:rem(80);
+    }
+    .line8_t8{
+        top:45%;
+        left:rem(388);
+    }
+    .line8_t9{
+        top:132%;
+        left:rem(474);
+    }
+    .line8_d1{
+        top:8%;
+        right:0;
+        width:rem(124);
     }
 }
