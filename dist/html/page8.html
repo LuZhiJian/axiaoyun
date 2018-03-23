@@ -2,13 +2,12 @@
 <html lang="zh-CN" data-rem="375">
 <head>
 <meta charset="UTF-8">
-<title>阿霄云漂浮瓶活动</title>
+<title>阿霄云活动</title>
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="apple-mobile-web-app-capable" content="no" />
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" type="text/css" href="../css/style-index.css" />
 <link rel="stylesheet" type="text/css" href="../css/style-page8.css" />
 <script type="text/javascript">
   function setRootSize() {
@@ -25,10 +24,61 @@
 </head>
 <body>
 <div class="main-wrapper page8">
-    <img src="../img/cloud04@2x.png" class="leftCloud8" alt="" />
-    <img src="../img/cloud03@2x.png" class="rightCloud8" alt="" />
-    <img src="../img/point_bg@2x.png" class="bd8" alt="" />
-    <img src="../img/brick@2x.png" class="foot8" alt="" />
+    <!-- 那些线条 -->
+    <div class="line8_1">
+      <span class="line line8_1_1"></span>
+      <span class="line line8_1_2"></span>
+    </div>
+    <div class="line8_1 line8_2">
+      <span class="line line8_1_1"></span>
+      <span class="line line8_1_2"></span>
+    </div>
+    <div class="line8_3">
+      <span class="line line8_3_1"></span>
+      <span class="line line8_3_2"></span>
+    </div>
+    <div class="line8_4">
+      <span class="line line8_4_1"></span>
+      <span class="line line8_4_2"></span>
+    </div>
+    <div class="line8_5">
+      <span class="line line8_5_1"></span>
+      <span class="line line8_5_2"></span>
+    </div>
+    <div class="line8_6">
+      <img src="../img/tree.png" class="tree8" alt="" />
+      <span class="line line8_6_1"></span>
+      <span class="line line8_6_2"></span>
+    </div>
+    <div class="line8_7">
+      <img src="../img/street_signs.png" class="street_signs8" alt="" />
+      <span class="line line8_7_1"></span>
+      <span class="line line8_7_2"></span>
+    </div>
+    <!-- 车 -->
+    <!-- <img src="../img/car_close.png" class="car8" alt="" /> -->
+    <div class="car" id="car">
+      <div class="car-sw">
+        <img src="../img/car_close.png" class="close">
+        <img src="../img/car_open.png" class="open">
+      </div>
+      <audio controls id="audio">
+        <source src="../media/open.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+      </audio>
+    </div>
+    <!-- 左右云朵 -->
+    <img src="../img/cloud03.png" class="leftCloud8" alt="" />
+    <img src="../img/cloud04.png" class="rightCloud8" alt="" />
+    <!-- 底部背景 -->
+    <img src="../img/point_bg.png" class="bd8" alt="" />
+    <img src="../img/brick.png" class="foot8" alt="" />
+
+    <a href="./page9.html" class="next">下一页</a>
 </div>
+
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery/jquery.easings.min.js"></script>
+<script type="text/javascript" src="../js/page8.js"></script>
 </body>
 </html>

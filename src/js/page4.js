@@ -16,14 +16,8 @@ $(function(){
   }
   carRun()
 
-  $('#control .btn').click(function(){
-    console.log('111');
-  })
-
   $('body').on('click', '#control .btn', function() {
-    console.log('qweq')
     var id = $(this).data('id');
-    console.log(id)
     if (id === 1) {
       alert('hello!')
     } else {

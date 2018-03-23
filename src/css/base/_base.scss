@@ -14,7 +14,8 @@ $color-blue-hover: #1e5b7f;
   max-width: 750px;
   margin: 0 auto;
 }
-html,body{
+html,
+body{
   height: 100%;
   background: $color-base;
   overflow: hidden;
@@ -22,14 +23,16 @@ html,body{
 }
 
 img{
-    display: block;
+  display: block;
+  border: 0;
 }
+
 a,a:hover,a:active,a:visited,a:link,a:focus{
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    background: none;
-    text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
 }
 /*黑色线条*/
 .line{
@@ -108,4 +111,19 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
   text-align: center;
   line-height: rem(54);
   font-size: rem(32);
+}
+
+.next {
+  width: rem(120);
+  height: rem(50);
+  display: block;
+  position: fixed;
+  right: rem(30);
+  line-height: rem(50);
+  text-align: center;
+  border-radius: rem(25);
+  top: 30%;
+  z-index: 999;
+  box-shadow: 0 0 rem(15) rgba(15, 90, 200, 0.5);
+  background-color: #abcdef!important;
 }

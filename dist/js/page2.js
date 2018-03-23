@@ -1,0 +1,1 @@
+"use strict";$(function(){function n(){$("#car").animate({left:5},{duration:1500,easing:"linear",complete:function(){$("#welcome").slideDown(500,"easeOutElastic"),setTimeout(function(){$("#car").find(".car-sw").addClass("open")},500)}})}n(),$("body").on("click","#control .btn",function(){var n=$(this).data("id");1===n?alert("hello!"):location.href="./index.html"})});
