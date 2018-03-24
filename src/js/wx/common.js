@@ -67,7 +67,7 @@ var pet = {
             //分享到...
             wx.ready(function() {
               document.getElementById('audio').play()
-              $('#bottle').hide();
+              // $('#bottle').hide();
               // wx.onMenuShareTimeline({
               //   title: shareTimeline,
               //   link: link,
