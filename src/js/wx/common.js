@@ -39,11 +39,13 @@ var pet = {
   },
 
   wxShare: function(wxData, callback, audioId) {
-    var url = encodeURIComponent(pet.url.split('#')[0]),
+    var url = pet.url.split('#')[0],
       wxData = wxData || {};
     $.ajax({
       dataType: "json",
-      url: "https://www.musikid.com/new/operate_all/wx_signpackage?url=" + url,
+      type: 'POST',
+      url: "https://www.musikid.com/new/operate_all/wx_signpackage",
+      data: { url: url, t: new Date().getTime() },
       success: function(data) {
         if (data.status == 200) {
           pet.loadFile("http://res.wx.qq.com/open/js/jweixin-1.0.0.js", function() {
@@ -57,7 +59,10 @@ var pet = {
               signature: res.signature,
               jsApiList: [
                 'onMenuShareTimeline',
-                'onMenuShareAppMessage'
+                'onMenuShareAppMessage',
+                'startRecord',
+                'stopRecord',
+                'chooseImage'
               ]
             });
 
@@ -67,6 +72,7 @@ var pet = {
                 document.getElementById(audioId).load()
                 callback()
               }
+              // wx.startRecord();
               // wx.onMenuShareTimeline({
               //   title: shareTimeline,
               //   link: link,
