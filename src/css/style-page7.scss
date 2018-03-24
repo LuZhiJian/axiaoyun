@@ -167,6 +167,7 @@
         color:#fff;
         font-size:rem(45);
         border-top: 2px solid #000;
+        user-select:none;
     }
     .audio_btn:active{
         background:$color-blue-hover;
