@@ -112,9 +112,13 @@
       width: rem(167);
       line-height: 0;
       position: absolute;
-      top: 75%;
-      left: rem(453);
-      @include animation(upToDown, 3s, linear, infinite);
+      top: 42%;
+      left: rem(123);
+      opacity: 0;
+
+      &.swall {
+        @include animation(upToDown, 3s, linear, infinite);
+      }
 
       img {
         width: 100%;
@@ -130,6 +134,7 @@
 
     .com_btn {
       position: static;
+      display: none;
     }
   }
 }
