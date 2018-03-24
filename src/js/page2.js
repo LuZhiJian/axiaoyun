@@ -1,7 +1,6 @@
 $(function() {
-  pet.wxShare('wxData', 1);
+  pet.wxShare('wxData', carRun, 'audio');
 
-  var house = document.getElementById('house');
   function carRun() {
     $('#car').animate({
       left: 5
@@ -15,13 +14,12 @@ $(function() {
           $('#bottle').css({
             'opacity': 1
           });
-          // creatTouchstartEventAndDispatch(house);
+          document.getElementById('audio').play()
           bool.start();
         }, 500)
       }
     });
   }
-  carRun()
 
   var bottleTop = $('#bottle').offset().top
   var bottleLeft = $('#bottle').offset().left
@@ -51,17 +49,6 @@ $(function() {
       location.href = "./index.html"
     }
   })
-
-
-  house.addEventListener('touchstart', function() {
-    $('#audio').trigger('play');
-  });
-
-  function creatTouchstartEventAndDispatch(el) {
-    var event = document.createEvent('Events');
-    event.initEvent('touchstart', true, true);
-    el.dispatchEvent(event);
-  }
 });
 
 // window.onload = function () {

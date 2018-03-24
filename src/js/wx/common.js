@@ -38,11 +38,9 @@ var pet = {
     return this.ua.match(/MicroMessenger/i);
   },
 
-  wxShare: function(wxData, type, cb) {
+  wxShare: function(wxData, callback, audioId) {
     var url = encodeURIComponent(pet.url.split('#')[0]),
       wxData = wxData || {};
-
-    console.log(url)
     $.ajax({
       dataType: "json",
       url: "https://www.musikid.com/new/operate_all/wx_signpackage?url=" + url,
@@ -50,7 +48,6 @@ var pet = {
         if (data.status == 200) {
           pet.loadFile("http://res.wx.qq.com/open/js/jweixin-1.0.0.js", function() {
             var res = eval(data.result);
-            console.log(res)
             //配置信息
             wx.config({
               debug: false,
@@ -66,8 +63,10 @@ var pet = {
 
             //分享到...
             wx.ready(function() {
-              document.getElementById('audio').play()
-              // $('#bottle').hide();
+              if (callback) {
+                document.getElementById(audioId).load()
+                callback()
+              }
               // wx.onMenuShareTimeline({
               //   title: shareTimeline,
               //   link: link,
