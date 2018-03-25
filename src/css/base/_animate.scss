@@ -81,6 +81,22 @@
   }
 }
 
+// 上下浮动动画
+@keyframes leftToRight {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0px);
+    transform: translate(10px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+}
+
 // 楼房闪烁
 @keyframes twinkle {
   0% {
@@ -110,5 +126,22 @@
   }
   100% {
     opacity: 0
+  }
+}
+
+
+// cd转动
+@keyframes runRotate {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
   }
 }

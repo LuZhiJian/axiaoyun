@@ -87,7 +87,7 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
   .btn_no {
     background: $color-orange;
 
-    &:hover, &:active {
+    &:active {
       background: $color-orange-hover;
       @include transition(.5s);
     }
@@ -96,7 +96,7 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
   .btn_yes {
     background-color: $color-blue;
 
-    &:hover, &:active {
+    &:active {
       background: $color-blue-hover;
       @include transition(.5s);
     }
@@ -126,4 +126,13 @@ a,a:hover,a:active,a:visited,a:link,a:focus{
   z-index: 999;
   box-shadow: 0 0 rem(15) rgba(15, 90, 200, 0.5);
   background-color: #abcdef!important;
+}
+
+.bgm {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
