@@ -26,21 +26,25 @@
 <div class="main-wrapper page7">
     <div class="bz">#最想删除的记忆#</div>
     <div class="info1">
+      <audio controls id="mymusic">
+        <source src="../media/mymusic.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+      </audio>
         <img src="../img/avatar.png" class="header" alt="">
         <div class="box_middle"><img src="../img/volume.png" class="volume" alt=""></div>
-        <span class="miao">53"</span>
+        <span class="miao"><em class="myMusicTime">0</em>"</span>
     </div>
-    <div class="info1 info2">
+    <div class="info1 info2" style="display:none;">
         <img src="../img/avatar.png" class="header" alt="">
         <div class="box_middle">你的呢？</div>
     </div>
-    <div class="info1 info3">
+    <div class="info1 info3" style="display:none;">
         <div class="box">
             <img src="../img/avatar.png" class="header" alt="">
             <div class="box_middle"><img src="../img/volume.png" class="volume" alt=""></div>
-            <span class="miao">53"</span>
+            <span class="miao"><em class="voiceTime">0</em>"</span>
         </div>
-        <div class="reListen">回听</div>
+        <a class="reListen">回听</a>
     </div>
     <!-- 横线 -->
     <div class="line8_1">
@@ -69,16 +73,18 @@
 
 
     <img src="../img/point_bg.png" class="bd" alt="">
-    <div class="com_btn">
-        <a href="javascript:;" class="btn btn_no">确认</a>
-        <a href="javascript:;" class="btn btn_yes">重录</a>
+    <div class="com_btn" style="display:none;">
+        <a href="javascript:;" id="sure" class="btn btn_no">确认</a>
+        <a href="javascript:;" id="again" class="btn btn_yes">重录</a>
     </div>
     <div class="audio_btn">按住录音</div>
 
     <!-- <a href="./page8.html" class="next">下一页</a> -->
 </div>
-  <script src="../js/jquery/jquery-1.11.3.min.js"></script>
-<!-- <script type="text/javascript" src="../js/wx/common.js"></script> -->
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script src="../js/textillate/jquery.fittext.js"></script> 
+<script src="../js/textillate/jquery.lettering.js"></script>
+<script src="../js/textillate/jquery.textillate.js"></script>
 <script type="text/javascript" src="../js/page7.js"></script>
 </body>
 </html>

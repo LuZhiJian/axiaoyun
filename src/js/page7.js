@@ -45,7 +45,9 @@ var pet = {
     console.log(url)
     $.ajax({
       dataType: "json",
-      url: "https://www.musikid.com/new/operate_all/wx_signpackage?url=" + url,
+      type: 'POST',
+      url: "https://www.musikid.com/new/operate_all/wx_signpackage",
+      data: { url: url, t: new Date().getTime() },
       success: function(data) {
         if (data.status == 200) {
           pet.loadFile("http://res.wx.qq.com/open/js/jweixin-1.0.0.js", function() {
@@ -61,44 +63,55 @@ var pet = {
               jsApiList: [
                 'onMenuShareTimeline',
                 'onMenuShareAppMessage',
-                'chooseImage'
+                'startRecord',
+                'stopRecord',
+                'playVoice'
               ]
             });
 
             //分享到...
             wx.ready(function() {
-    var localId;
-    $(".btn_no").click(function(event) {
-        // wx.startRecord();
-        wx.chooseImage({
-count: 1, // 默认9
-sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-success: function (res) {
-var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-}
-});
-    });
-  $(".btn_yes").click(function(event) {
-    wx.onMenuShareTimeline({
-    title: '22', // 分享标题
-    link: 'http://www.musikid.com/html/lixiaoyun/html/page7.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-    imgUrl: '../image/car.png', // 分享图标
-    success: function () {
-    alert(55)
-}
-});
-        // wx.stopRecord({
-        //     success: function (res) {
-        //         localId = res.localId;
-        //     }
-        // });
-    });
-  $(".audio_btn").click(function(event) {
-        wx.playVoice({
-            localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
-        });
-  });
+                $("#mymusic")[0].play();
+                var time = parseInt($("#mymusic")[0].duration);
+                $(".myMusicTime").text(time);
+                var interval = setInterval(function(){
+                    if($("#mymusic")[0].ended){
+                        $(".info2").fadeIn("400");
+                        clearInterval(interval);
+                    }
+                },500);
+                  var localId;
+                  var time;
+                  $(".audio_btn")[0].ontouchstart = function(){
+                        time = 0
+                        $(this).text("松开结束");
+                        wx.startRecord();
+                        var timer = setInterval(function(){
+                            time++;
+                        },1000);
+                  }
+                  $(".audio_btn")[0].ontouchend = function(){
+                        $(this).text("按住录音");
+                       wx.stopRecord({
+                            success: function (res) {
+                                localId = res.localId;
+                               $(".info3").show();
+                               $(".com_btn").show();
+                               clearInterval(timer);
+                               $(".voiceTime").text(time);
+                            }
+                        });
+                  }
+                  $(".reListen").click(function(event) {
+                        if(localId==null) return;
+                        wx.playVoice({
+                            localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
+                        });
+                  });
+                  $("#again").click(function(event) {
+                        $(".voiceTime").text("0");
+                        localId = null;
+                  });
             });
           })
         }
@@ -111,7 +124,9 @@ var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可
 };
 
 $(function() {
+    
     pet.wxShare();
+     $('.bz').textillate({ in: { effect: 'bounceIn ' } });
   //   var localId;
   // //   $(".audio_btn").mousedown(function(event) {
   // //       wx.startRecord();

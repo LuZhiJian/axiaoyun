@@ -30,6 +30,11 @@
         overflow:hidden;
         float:left;
     }
+    audio {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
     .info1{
         position:absolute;
         top:rem(160);
@@ -119,7 +124,7 @@
         .reListen{
             border:rem(2) solid #000;
             height:rem(80);
-            background:#5c5c5c;
+            background:$color-grey;
             width:rem(236);
             border-radius:rem(8);
             line-height:rem(80);
@@ -130,9 +135,10 @@
             margin:rem(20) rem(90) 0 0;
             position: relative;
         }
+        .reListen:active{background:$color-grey-hover;}
         .reListen:after,.reListen:before {
             border: rem(12) solid transparent;
-            border-bottom: rem(12) solid #5c5c5c;
+            border-bottom: rem(12) solid $color-grey;
             width: 0;
             height: 0;
             position: absolute;
@@ -145,6 +151,9 @@
             border-bottom-color: #000;
             top: rem(-26);
         }
+/*        .reListen:active:after{
+            border-bottom-color: #$color-grey-hover;
+        }*/
 
     }
     .com_btn{
