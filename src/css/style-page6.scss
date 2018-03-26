@@ -1,239 +1,286 @@
 @import "./base/_base";
 
-.page6{
-    height:100%;
-    width:100%;
-    background:$color-base;
-    .moon{
-        position:absolute;
-        top:5%;
-        left:0;
-        height:16%;
-        z-index:99;
-    }
-    .group{
-        position:absolute;
-        top:53%;
-        left:0;
-        height:24%;
-    }
-    .guitar{
-        position:absolute;
-        top:15%;
-        right:0;
-        height:52%;
-    }
-/*    .car{
+.page6 {
+  height: 100%;
+  width: 100%;
+  background: $color-base;
+
+  .moon {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    height: 16%;
+    z-index: 99;
+  }
+
+  .group {
+    position: absolute;
+    top: 53%;
+    left: 0;
+    height: 24%;
+  }
+
+  .guitar {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    height: 52%;
+  }
+  /*    .car{
         position:absolute;
         top:29%;
         left:rem(8);
         height:15%;
         z-index:99;
     }*/
-    .car{
-        position:absolute;
-        top:29%;
-        left:rem(-100);
-        height:15%;
-        z-index:99;
+  .car {
+    position: absolute;
+    top: 29%;
+    left: rem(-380);
+    height: 15%;
+    z-index: 99;
 
-      audio {
-        width: 0;
-        height: 0;
-        opacity: 0;
+    audio {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+
+    .car-sw {
+      line-height: 0;
+      height: 100%;
+
+      .open {
+        display: none;
       }
 
-      .car-sw {
-        line-height: 0;
-        height: 100%;
+      .close {
+        display: block;
+      }
 
+      &.open {
         .open {
-          display: none;
-        }
-
-        .close {
           display: block;
         }
 
-        &.open {
-          .open {
-            display: block;
-          }
-
-          .close {
-            display: none;
-          }
+        .close {
+          display: none;
         }
       }
+    }
 
-      img {
-        height: 100%;
-      }
+    img {
+      height: 100%;
     }
-    .street_signs{
-        width:rem(49);
-        position:absolute;
-        top:rem(127);
-        right:rem(147);
+  }
+
+  .bottle {
+    width: rem(147);
+    line-height: 0;
+    position: absolute;
+    top: 29%;
+    left: rem(313);
+    z-index: 9999;
+    opacity: 0;
+
+    &.swall {
+      @include animation(upToDown, 3s, linear, infinite);
     }
-    .com_btn{
-        bottom:10%;
+
+    img {
+      width: 100%;
     }
-    .welcome-txt {
-        width: rem(160);
-        height: rem(68);
-        background: url('../img/bubble.png') no-repeat;
-        background-size: contain;
-        text-align: center;
-        line-height: rem(60);
-        font-size: rem(32);
-        position: absolute;
-        top: 22%;
-        right: 8%;
-        margin-left:rem(80);
+  }
+
+  .street_signs {
+    width: rem(49);
+    position: absolute;
+    top: rem(127);
+    right: rem(147);
+  }
+
+  .com_btn {
+    bottom: 10%;
+    display: none;
+  }
+
+  .welcome-txt {
+    position: absolute;
+    top: 22%;
+    right: 8%;
+    display: none;
+  }
+  /*横线*/
+  .line8_6 {
+    position: absolute;
+    top: 23%;
+    left: rem(311);
+    width: rem(140);
+
+    .line8_6_1 {
+      width: rem(97);
     }
-    /*横线*/
-    .line8_6{
-        position:absolute;
-        top:23%;
-        left:rem(311);
-        width:rem(140);
-        .line8_6_1{
-            width:rem(97);
-        }
-        .line8_6_2{
-            width:rem(98);
-            margin:rem(12) 0 0 rem(41);
-        }
-        .tree8{
-            width:rem(39);
-            margin-left:rem(28);
-        }
+
+    .line8_6_2 {
+      width: rem(98);
+      margin: rem(12) 0 0 rem(41);
     }
-    .line8_7{
-        position:absolute;
-        top:12%;
-        right:rem(100);
-        width:rem(150);
-        .line8_7_1{
-            width:rem(100);
-            float:left;
-        }
-        .line8_7_2{
-            width:rem(11);
-            float:left;
-            margin-left:rem(10);
-        }
-        .line8_7_3{
-            width:rem(100);
-            float:right;
-            margin-top:rem(14);
-        }
-        .line8_7_4{
-            width:rem(11);
-            float:right;
-            margin-top:rem(18);
-            margin-left:rem(10);
-        }
-        .street_signs8{
-            width:rem(49);
-            margin-left:rem(30);
-        }
+
+    .tree8 {
+      width: rem(39);
+      margin-left: rem(28);
     }
-    .line8_8{
-        position:absolute;
-        top:44%;
-        left:0;
-        width:rem(32);
-        .line8_8_1{
-            width:rem(32);
-            float:left;
-        }
+  }
+
+  .line8_7 {
+    position: absolute;
+    top: 12%;
+    right: rem(100);
+    width: rem(150);
+    @include animation(leftToRight, 3s, linear, infinite);
+
+    .line8_7_1 {
+      width: rem(100);
+      float: left;
     }
-    .line8_9{
-        position:absolute;
-        bottom:20%;
-        right:rem(100);
-        width:rem(120);
-        .line8_9_1{
-            width:rem(98);
-            float:right;
-        }
-        .line8_9_2{
-            width:rem(98);
-            float:left;
-            margin-top:rem(14);
-        }
+
+    .line8_7_2 {
+      width: rem(11);
+      float: left;
+      margin-left: rem(10);
     }
-    .line8_5{
-        position:absolute;
-        top:45%;
-        right:rem(167);
-        width:rem(120);
-        .line8_5_1{
-            width:rem(98);
-            float:left;
-        }
-        .line8_5_2{
-            width:rem(98);
-            float:right;
-            margin-top:rem(14);
-        }
+
+    .line8_7_3 {
+      width: rem(100);
+      float: right;
+      margin-top: rem(14);
     }
-    .line8_4{
-        position:absolute;
-        top:10%;
-        left:rem(187);
-        width:rem(100);
-        .line8_4_1{
-            width:rem(55);
-            float:left;
-        }
-        .line8_4_2{
-            width:rem(100);
-            float:left;
-            margin-top:rem(14);
-        }
+
+    .line8_7_4 {
+      width: rem(11);
+      float: right;
+      margin-top: rem(18);
+      margin-left: rem(10);
     }
-    .line8_1{
-        position:absolute;
-        top:44%;
-        left:rem(108);
-        width:rem(150);
-        .line8_1_1{
-            width:rem(100);
-            float:left;
-        }
-        .line8_1_2{
-            width:rem(14);
-            float:left;
-            margin-left:rem(10);
-        }
-        .line8_1_3{
-            width:rem(100);
-            float:right;
-            margin-top:rem(14);
-        }
-        .line8_1_4{
-            width:rem(14);
-            float:right;
-            margin-top:rem(18);
-            margin-left:rem(10);
-        }
+
+    .street_signs8 {
+      width: rem(49);
+      margin-left: rem(30);
     }
-    .line8_t1{
-        top:62%;
-        left:rem(415);
+  }
+
+  .line8_8 {
+    position: absolute;
+    top: 44%;
+    left: 0;
+    width: rem(32);
+
+    .line8_8_1 {
+      width: rem(32);
+      float: left;
     }
-    .line8_t2{
-        top:auto;
-        left:0;
-        bottom:3%;
+  }
+
+  .line8_9 {
+    position: absolute;
+    bottom: 20%;
+    right: rem(100);
+    width: rem(120);
+
+    .line8_9_1 {
+      width: rem(98);
+      float: right;
     }
-    .line8_t3{
-        top:auto;
-        left:auto;
-        right:0;
-        bottom:6%;
+
+    .line8_9_2 {
+      width: rem(98);
+      float: left;
+      margin-top: rem(14);
     }
+  }
+
+  .line8_5 {
+    position: absolute;
+    top: 45%;
+    right: rem(167);
+    width: rem(120);
+
+    .line8_5_1 {
+      width: rem(98);
+      float: left;
+    }
+
+    .line8_5_2 {
+      width: rem(98);
+      float: right;
+      margin-top: rem(14);
+    }
+  }
+
+  .line8_4 {
+    position: absolute;
+    top: 10%;
+    left: rem(187);
+    width: rem(100);
+
+    .line8_4_1 {
+      width: rem(55);
+      float: left;
+    }
+
+    .line8_4_2 {
+      width: rem(100);
+      float: left;
+      margin-top: rem(14);
+    }
+  }
+
+  .line8_1 {
+    position: absolute;
+    top: 44%;
+    left: rem(108);
+    width: rem(150);
+
+    .line8_1_1 {
+      width: rem(100);
+      float: left;
+    }
+
+    .line8_1_2 {
+      width: rem(14);
+      float: left;
+      margin-left: rem(10);
+    }
+
+    .line8_1_3 {
+      width: rem(100);
+      float: right;
+      margin-top: rem(14);
+    }
+
+    .line8_1_4 {
+      width: rem(14);
+      float: right;
+      margin-top: rem(18);
+      margin-left: rem(10);
+    }
+  }
+
+  .line8_t1 {
+    top: 62%;
+    left: rem(415);
+  }
+
+  .line8_t2 {
+    top: auto;
+    left: 0;
+    bottom: 3%;
+  }
+
+  .line8_t3 {
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: 6%;
+  }
 }

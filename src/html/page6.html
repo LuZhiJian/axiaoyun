@@ -1,35 +1,53 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN" data-rem="375">
+
 <head>
-<meta charset="UTF-8">
-<title>阿霄云活动</title>
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="apple-mobile-web-app-capable" content="no" />
-<meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" type="text/css" href="../css/style-page6.css" />
-<script type="text/javascript">
-  function setRootSize() {
-    var docWid = window.document.documentElement,
-      width = docWid.getBoundingClientRect().width,
-      fontSize = (width >= 750) ? 40 : width / 750 * 40;
-    docWid.style.fontSize = fontSize + 'px';
-  }
-  window.addEventListener('resize', function() {
+  <meta charset="UTF-8">
+  <title>阿霄云活动</title>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="../css/style-page6.css" />
+  <script src="../js/jquery/jquery-1.11.3.min.js"></script>
+  <script src="../js/jquery/jquery.easings.min.js"></script>
+  <script src="../js/jquery/parabola.js"></script>
+  <script type="text/javascript">
+    function setRootSize() {
+      var docWid = window.document.documentElement,
+        width = docWid.getBoundingClientRect().width,
+        fontSize = (width >= 750) ? 40 : width / 750 * 40;
+      docWid.style.fontSize = fontSize + 'px';
+    }
+    window.addEventListener('resize', function() {
+      setRootSize();
+    }, false);
     setRootSize();
-  }, false);
-  setRootSize();
-</script>
+  </script>
 </head>
+
 <body>
-<div class="main-wrapper page6">
+  <div class="main-wrapper page6">
+    <div class="bgm">
+      <audio controls id="bgm-2" loop>
+        <source src="../media/bgm-2.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+      </audio>
+      <audio controls id="click-music">
+        <source src="../media/click.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+      </audio>
+    </div>
     <!-- 素材 -->
     <img src="../img/moon.png" class="moon" alt="" />
     <img src="../img/Group.png" class="group" alt="" />
     <img src="../img/guitar.png" class="guitar" alt="" />
-    <div class="welcome-txt">
+    <div class="welcome-txt" id="welcome">
       未来式!
+    </div>
+    <div class="bottle" id="bottle">
+      <img src="../img/drifting_bottle.png">
     </div>
     <!-- 一堆堆横线 -->
     <div class="line8_6">
@@ -82,7 +100,6 @@
       <span class="line line8_4_2"></span>
     </div>
 
-    <!-- <img src="../img/car_close.png" class="car" alt="" />     -->
     <div class="car" id="car">
       <div class="car-sw">
         <img src="../img/car_close.png" class="close">
@@ -93,15 +110,15 @@
         您的浏览器不支持 audio 元素。
       </audio>
     </div>
-    <div class="com_btn">
-        <a href="javascript:;" class="btn btn_yes">捡</a>
-        <a href="javascript:;" class="btn btn_no">不捡</a>
+    <div class="com_btn" id="control">
+      <a href="javascript:;" class="btn btn_yes" data-id="1">捡</a>
+      <a href="javascript:;" class="btn btn_no" data-id="2">不捡</a>
     </div>
     <a href="./page7.html" class="next">下一页</a>
-</div>
+  </div>
 
-<script src="../js/jquery/jquery-1.11.3.min.js"></script>
-<script src="../js/jquery/jquery.easings.min.js"></script>
-<script type="text/javascript" src="../js/page6.js"></script>
+  <script type="text/javascript" src="../js/wx/common.js"></script>
+  <script type="text/javascript" src="../js/page6.js"></script>
 </body>
+
 </html>
