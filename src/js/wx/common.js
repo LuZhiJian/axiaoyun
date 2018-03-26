@@ -38,7 +38,7 @@ var pet = {
     return this.ua.match(/MicroMessenger/i);
   },
 
-  wxShare: function(wxData, callback, audioId) {
+  wxShare: function(wxData, callback, audioId, bgm) {
     var url = pet.url.split('#')[0],
       wxData = wxData || {};
     $.ajax({
@@ -68,11 +68,13 @@ var pet = {
 
             //分享到...
             wx.ready(function() {
+              if (bgm) {
+                document.getElementById(bgm).play()
+              }
               if (callback) {
                 document.getElementById(audioId).load()
                 callback()
               }
-              // wx.startRecord();
               // wx.onMenuShareTimeline({
               //   title: shareTimeline,
               //   link: link,

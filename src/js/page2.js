@@ -38,12 +38,13 @@ $(function() {
     });
   }
 
-  pet.wxShare('wxData', carRun, 'audio');
+  pet.wxShare('wxData', carRun, 'audio', 'bgm-2');
 
   $('body').on('click', '#control .btn', function() {
     var id = $(this).data('id');
+    $('#click-music').trigger('play');
     if (id === 1) {
-      alert('hello!')
+      // alert('hello!')
     } else {
       location.href = "./index.html"
     }
