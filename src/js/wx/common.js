@@ -1,8 +1,6 @@
 var pet = {
   //路径
   version: (new Date()).getTime(),
-  weixinRequest: "http://www.yc.cn/",
-  appId: 'wxf4466017457b72fa',
   wxData: {},
   //load js or css
   loadFile: function(url, callback) {

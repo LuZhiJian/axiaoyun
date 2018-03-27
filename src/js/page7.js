@@ -1,8 +1,6 @@
 var pet = {
   //路径
   version: (new Date()).getTime(),
-  weixinRequest: "http://www.yc.cn/",
-  appId: 'wxf4466017457b72fa',
   wxData: {},
   //load js or css
   loadFile: function(url, callback) {
@@ -42,17 +40,18 @@ var pet = {
     var url = pet.url.split('#')[0],
       wxData = wxData || {};
 
-    console.log(url)
     $.ajax({
       dataType: "json",
       type: 'POST',
       url: "https://www.musikid.com/new/operate_all/wx_signpackage",
-      data: { url: url, t: new Date().getTime() },
+      data: {
+        url: url,
+        t: new Date().getTime()
+      },
       success: function(data) {
         if (data.status == 200) {
           pet.loadFile("http://res.wx.qq.com/open/js/jweixin-1.0.0.js", function() {
             var res = eval(data.result);
-            console.log(res)
             //配置信息
             wx.config({
               debug: false,
@@ -71,47 +70,48 @@ var pet = {
 
             //分享到...
             wx.ready(function() {
-                $("#mymusic")[0].play();
-                var time = parseInt($("#mymusic")[0].duration);
-                $(".myMusicTime").text(time);
-                var interval = setInterval(function(){
-                    if($("#mymusic")[0].ended){
-                        $(".info2").fadeIn("400");
-                        clearInterval(interval);
-                    }
-                },500);
-                  var localId;
-                  var time;
-                  $(".audio_btn")[0].ontouchstart = function(){
-                        time = 0
-                        $(this).text("松开结束");
-                        wx.startRecord();
-                        var timer = setInterval(function(){
-                            time++;
-                        },1000);
+              var tpIndex = pet.queryString('topic');
+              $("#mymusic")[0].play();
+              var time = parseInt($("#mymusic")[0].duration);
+              $(".myMusicTime").text(time);
+              var interval = setInterval(function() {
+                if ($("#mymusic")[0].ended) {
+                  $(".info2").fadeIn("400");
+                  clearInterval(interval);
+                }
+              }, 500);
+              var localId;
+              var time;
+              $(".audio_btn")[0].ontouchstart = function() {
+                time = 0
+                $(this).text("松开结束");
+                wx.startRecord();
+                var timer = setInterval(function() {
+                  time++;
+                }, 1000);
+              }
+              $(".audio_btn")[0].ontouchend = function() {
+                $(this).text("按住录音");
+                wx.stopRecord({
+                  success: function(res) {
+                    localId = res.localId;
+                    $(".info3").show();
+                    $(".com_btn").show();
+                    clearInterval(timer);
+                    $(".voiceTime").text(time);
                   }
-                  $(".audio_btn")[0].ontouchend = function(){
-                        $(this).text("按住录音");
-                       wx.stopRecord({
-                            success: function (res) {
-                                localId = res.localId;
-                               $(".info3").show();
-                               $(".com_btn").show();
-                               clearInterval(timer);
-                               $(".voiceTime").text(time);
-                            }
-                        });
-                  }
-                  $(".reListen").click(function(event) {
-                        if(localId==null) return;
-                        wx.playVoice({
-                            localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
-                        });
-                  });
-                  $("#again").click(function(event) {
-                        $(".voiceTime").text("0");
-                        localId = null;
-                  });
+                });
+              }
+              $(".reListen").click(function(event) {
+                if (localId == null) return;
+                wx.playVoice({
+                  localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
+                });
+              });
+              $("#again").click(function(event) {
+                $(".voiceTime").text("0");
+                localId = null;
+              });
             });
           })
         }
@@ -124,9 +124,11 @@ var pet = {
 };
 
 $(function() {
-    
-    pet.wxShare();
-     $('.bz').textillate({ in: { effect: 'bounceIn ' } });
+  var topicList = ['#你喜欢/留在这座城市的理由#', '#你最想要删除的记忆#', '#你最想对前任说的一句话#', '#你当下最有冲动想做的事情#', '#十年之后，你想要做的事情#'];
+  var tpIndex = pet.queryString('topic');
+  $("#write").text(topicList[tpIndex - 1]).typewriter(300);
+  $('#mymusic').find('source').attr('src', '../media/story/t' + tpIndex + '.m4a');
+  pet.wxShare();
   //   var localId;
   // //   $(".audio_btn").mousedown(function(event) {
   // //       wx.startRecord();
@@ -153,7 +155,7 @@ $(function() {
   //       $(".btn_no").text("2");
   // }
 });
-document.oncontextmenu=function(e){
-    //或者return false;
-    e.preventDefault();
+document.oncontextmenu = function(e) {
+  //或者return false;
+  e.preventDefault();
 };
