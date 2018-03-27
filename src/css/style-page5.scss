@@ -1,6 +1,6 @@
 @import "./base/_base";
 
-.page6 {
+.page5 {
   height: 100%;
   width: 100%;
   background-color: #FEFBE7;
@@ -59,6 +59,7 @@
     left: 0;
     height: 47%;
     z-index: 9;
+    @include animation(upToDown, 3s, linear, infinite);
   }
 
   .boxer2 {
@@ -67,6 +68,7 @@
     right: 0;
     height: 47%;
     z-index: 9;
+    @include animation(upToDown, 3s, linear, infinite);
   }
 
   .line5_1_1 {
@@ -142,6 +144,7 @@
     height: 21%;
     bottom: 0;
     margin-left: 0;
+    display: none;
 
     .btn_yes {
       top: 15%;
@@ -208,7 +211,7 @@
   .car {
     height: 15%;
     top: 49%;
-    left: -30%;
+    left: - rem(370);
     position: absolute;
     z-index: 999;
 
@@ -247,17 +250,10 @@
   }
 
   .welcome-txt {
-    width: rem(160);
-    height: rem(68);
-    background: url('../img/bubble.png') no-repeat;
-    background-size: contain;
-    text-align: center;
-    line-height: rem(60);
-    font-size: rem(32);
     position: absolute;
     top: 48.5%;
     right: 10%;
-    margin-left: rem(80);
     z-index: 99;
+    display: none;
   }
 }

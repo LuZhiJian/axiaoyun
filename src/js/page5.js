@@ -2,21 +2,30 @@ $(function(){
   function carRun() {
     var bottleTop = $('#bottle').offset().top
     var bottleLeft = $('#bottle').offset().left
+    var n = 0.1
     var bool = new Parabola({
       el: "#bottle",
       offset: [160, 120],
       curvature: 0.02,
-      duration: 4000,
+      duration: 3500,
       callback: function() {
         $('#bottle').addClass('swall');
         $('#control').fadeIn();
       },
       stepCallback: function(x, y) {
+        if (n > 1) {
+          n = 1
+        } else {
+          n += 0.004
+        }
         $("<div>").appendTo(".top-part").css({
           "position": "absolute",
           "top": bottleTop + y,
           "left": bottleLeft + x
         });
+        $('#bottle').css({
+          "transform": "scale(" + n + ")"
+        })
       }
     });
     $('#car').animate({
@@ -29,7 +38,8 @@ $(function(){
         setTimeout(function() {
           $('#car').find('.car-sw').addClass('open');
           $('#bottle').css({
-            'opacity': 1
+            'opacity': 1,
+            "transform": "scale(0.1)"
           });
           document.getElementById('audio').play()
           bool.start();
