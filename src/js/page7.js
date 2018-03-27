@@ -65,7 +65,8 @@ var pet = {
                 'onMenuShareAppMessage',
                 'startRecord',
                 'stopRecord',
-                'playVoice'
+                'playVoice',
+                'uploadVoice'
               ]
             });
 
@@ -112,6 +113,15 @@ var pet = {
                         $(".voiceTime").text("0");
                         localId = null;
                   });
+                   $("#sure").click(function(event) {
+                        wx.uploadVoice({
+                            localId: localId, // 需要上传的音频的本地ID，由stopRecord接口获得
+                            isShowProgressTips: 1, // 默认为1，显示进度提示
+                            success: function (res) {
+                                // var serverId = res.serverId; // 返回音频的服务器端ID
+                            }
+                        });
+                  });                  
             });
           })
         }
@@ -127,31 +137,6 @@ $(function() {
     
     pet.wxShare();
      $('.bz').textillate({ in: { effect: 'bounceIn ' } });
-  //   var localId;
-  // //   $(".audio_btn").mousedown(function(event) {
-  // //       wx.startRecord();
-  // //   });
-  // // $(".audio_btn").mouseup(function(event) {
-  // //       wx.stopRecord({
-  // //           success: function (res) {
-  // //               localId = res.localId;
-  // //           }
-  // //       });
-  // //   });
-  // $(".btn_no").click(function(event) {
-  //       wx.playVoice({
-  //           localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
-  //       });
-  // });
-  // $(".audio_btn")[0].ontouchstart = function(){
-  //       console.log("开始录音");
-  //       $(".btn_no").text("1");
-  // }
-
-  // $(".audio_btn")[0].ontouchend = function(){
-  //       console.log("停止录音");
-  //       $(".btn_no").text("2");
-  // }
 });
 document.oncontextmenu=function(e){
     //或者return false;

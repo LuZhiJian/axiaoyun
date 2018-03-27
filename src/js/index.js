@@ -10,22 +10,22 @@ $(function(){
     var plus = minus=0.02,
         timeDown,timeUp,stopDownTime;
     var ispause = false;
-    $('.speed').mousedown(function(){
+    $('.speed').on('touchstart',function(){
         $("svg")[0].unpauseAnimations();
         // $('#map').attr('dur',20);
-        // timeDown = setInterval(function(){
-        //     var getCurtime = Number($('#map').attr('dur'));
-        //     console.log(getCurtime);
-        //     if(getCurtime > 13){
-        //         $('#map').attr('dur',getCurtime - plus);
-        //     }
-        // },10);
+        timeDown = setInterval(function(){
+            var getCurtime = Number($('#map').attr('dur'));
+            console.log(getCurtime);
+            if(getCurtime > 13){
+                $('#map').attr('dur',getCurtime - plus);
+            }
+        },8);
     });
-    $('.speed').mouseup(function(){
+    $('.speed').on('touchend',function(){
         clearInterval(timeDown);
     });
     
-    $('.stop').mousedown(function(){
+    $('.stop').on('touchstart',function(){
         $("svg")[0].pauseAnimations();
                 park();
         // stopDownTime = 0;
@@ -48,7 +48,7 @@ $(function(){
         //     }
         // },1100)
     });
-    $('.stop').mouseup(function(){
+    $('.stop').on('touchend',function(){
         ispause=false;
         clearInterval(timeUp);
     });
