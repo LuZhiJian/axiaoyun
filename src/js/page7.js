@@ -24,7 +24,7 @@ var pet = {
     };
   },
 
-  //获取UR参数
+    //获取UR参数
   queryString: function(key) {
     return (document.location.search.match(new RegExp("(?:^\\?|&)" + key + "=(.*?)(?=&|$)")) || ['', null])[1];
   },
@@ -37,8 +37,7 @@ var pet = {
   },
 
   wxShare: function(wxData, type, cb) {
-    var url = pet.url.split('#')[0],
-      wxData = wxData || {};
+    var url = pet.url.split('#')[0], wxData = wxData || {};
 
     $.ajax({
       dataType: "json",
@@ -64,7 +63,8 @@ var pet = {
                 'onMenuShareAppMessage',
                 'startRecord',
                 'stopRecord',
-                'playVoice'
+                'playVoice',
+                'uploadVoice'
               ]
             });
 
@@ -100,22 +100,30 @@ var pet = {
                     clearInterval(timer);
                     $(".voiceTime").text(time);
                   }
+                  $(".reListen").click(function(event) {
+                    if (localId == null) return;
+                    wx.playVoice({
+                      localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
+                    });
+                  });
+                  $("#again").click(function(event) {
+                    $(".voiceTime").text("0");
+                    localId = null;
+                  });
+                  $("#sure").click(function(event) {
+                    wx.uploadVoice({
+                      localId: localId, // 需要上传的音频的本地ID，由stopRecord接口获得
+                      isShowProgressTips: 1, // 默认为1，显示进度提示
+                      success: function(res) {
+                        // var serverId = res.serverId; // 返回音频的服务器端ID
+                      }
+                    });
+                  });
                 });
               }
-              $(".reListen").click(function(event) {
-                if (localId == null) return;
-                wx.playVoice({
-                  localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
-                });
-              });
-              $("#again").click(function(event) {
-                $(".voiceTime").text("0");
-                localId = null;
-              });
-            });
-          })
-        }
-      },
+            })
+          });
+        },
       error: function(xhr, type) {
         console.log('Ajax error!')
       }
@@ -154,8 +162,7 @@ $(function() {
   //       console.log("停止录音");
   //       $(".btn_no").text("2");
   // }
-});
-document.oncontextmenu = function(e) {
+}); document.oncontextmenu = function(e) {
   //或者return false;
   e.preventDefault();
 };
