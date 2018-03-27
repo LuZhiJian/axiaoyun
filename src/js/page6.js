@@ -5,9 +5,9 @@ $(function(){
     var n = 0.1
     var bool = new Parabola({
       el: "#bottle",
-      offset: [70, 136],
+      offset: [73, 136],
       curvature: 0.1,
-      duration: 4000,
+      duration: 3500,
       callback: function() {
         $('#bottle').addClass('swall');
         $('#control').fadeIn();

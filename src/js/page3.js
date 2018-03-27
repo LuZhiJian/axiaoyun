@@ -7,7 +7,7 @@ $(function(){
       el: "#bottle",
       offset: [130, 160],
       curvature: 0.04,
-      duration: 4000,
+      duration: 3500,
       callback: function() {
         $('#bottle').addClass('swall');
         $('#control').fadeIn();
