@@ -61,12 +61,20 @@
   }
 
   .maps-wrap {
-    height: 50%;
-    max-height: rem(726);
+    height: 310px;
     position: absolute;
-    top: 37%;
+    top: 65%;
+    margin-top:-175px;
     right: 10%;
     z-index: 2;
+    
+    #sketchpad{
+      width: 341px;
+      height: 341px;
+      position: relative;
+      top:-50px;
+      left:-50px;
+    }
 
     .maps-content {
       width: 100%;

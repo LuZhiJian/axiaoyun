@@ -46,10 +46,18 @@
           <div class="maps">
             <img src="../img/orbit.png">
           </div>
-          <div class="img-box car">
+          <!-- <div class="img-box car">
             <img src="../img/car.png">
-          </div>
+          </div> -->
         </div>
+        <svg id="sketchpad" preserveAspectRatio="xMinYMin meet" height="400" style="top:-21px;left:-23px;position:absolute;" viewBox="-50,-50,800,800">
+          <image  height="100px" width="100px" id="car" xlink:href="../img/car.png" x="-50" y="-50">
+            <animateMotion id="map" begin="0s" dur="20" rotate="auto" repeatCount="indefinite">
+              <mpath xlink:href="#motionPath" /> 
+            </animateMotion>
+          </image>
+          <path id="motionPath" d="M497.205275,343.129598 C 591.482461,367.093008 607,400.551724 561,433.597241 515,466.642759 466,458.631724 457,487.671724 448,516.711724 487.482461,539.743448 487.482461,570.786207 487.482461,613.845517 448,640.882759 359,620.855172 270,600.827586 242,765.053793 160,715.986207 78,666.918621 60,715.986207 21,703.969655 -18,691.953103 1,631.870345 55,613.845517 109,595.82069 88,543.748966 118,510.703448 144.637939,481.3613 210.622599,486.053664 236.105061,470.648276 261.587522,455.242888 268.406118,424.828496 236.105061,392.155991 203.804003,359.483487 199.766371,343.129598 199.766371,297.024957 199.766371,250.920316 259.56322,200.111868 281.097258,181.815266 302.631297,163.518663 306.475273,120.799523 271.482461,90.7408191 236.489649,60.682115 251.487956,14.5320431 281.097258,4.07684174 310.706561,-6.37835966 360.504025,4.07684174 379.346308,26.2941447 398.188592,48.5114477 391.482461,84.7325432 435.482461,98.7518536 479.482461,112.771164 487.482461,156.831854 487.482461,203.896681 487.482461,250.961509 402.928088,319.166187 497.205275,343.129598 Z" stroke="#cd0000" stroke-width="0" fill="none" />
+        </svg>
       </div>
 
       <div class="footer">
@@ -64,13 +72,16 @@
             <img src="../img/hand.png">
           </div>
           <div class="control-btn">
-            <div class="btn stop"></div>
-            <div class="btn speed"></div>
+            <a href="javascript:;" class="btn stop"></a>
+            <a href="javascript:;" class="btn speed"></a>
           </div>
         </div>
       </div>
     </div>
     <a href="./page2.html" class="next">下一页</a>
   </div>
+
+<script src="../js/jquery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
 </body>
 </html>
