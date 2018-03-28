@@ -1,29 +1,40 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>阿霄云活动</title>
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="apple-mobile-web-app-capable" content="no" />
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css" href="../css/style-index.css?v=201803281241" />
-    <script type="text/javascript">
-      function setRootSize() {
-        var docWid = window.document.documentElement,
-          width = docWid.getBoundingClientRect().width,
-          fontSize = (width >= 750) ? 40 : width / 750 * 40;
-        docWid.style.fontSize = fontSize + 'px';
-      }
-      window.addEventListener('resize', function() {
-        setRootSize();
-      }, false);
+  <meta charset="UTF-8">
+  <title>阿霄云活动</title>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="../css/style-index.css?v=201803281241" />
+  <script src="../js/jquery/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+    function setRootSize() {
+      var docWid = window.document.documentElement,
+        width = docWid.getBoundingClientRect().width,
+        fontSize = (width >= 750) ? 40 : width / 750 * 40;
+      docWid.style.fontSize = fontSize + 'px';
+    }
+    window.addEventListener('resize', function() {
       setRootSize();
-    </script>
+    }, false);
+    setRootSize();
+  </script>
 </head>
+
 <body>
   <div class="main-wrapper">
+    <div class="bgm">
+      <audio controls id="bgm-1" loop>
+        <source src="../media/bgm-1.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls id="speed">
+        <source src="../media/speed.mp3" type="audio/mpeg">
+      </audio>
+    </div>
     <div class="content">
       <div class="img-box logo">
         <img src="../img/logo.png">
@@ -68,7 +79,7 @@
           <div class="img-box tree-3">
             <img src="../img/tree.png">
           </div>
-          <div class="img-box hands animate">
+          <div class="img-box hands animate" id="hand">
             <img src="../img/hand.png">
           </div>
           <div class="control-btn">
@@ -78,10 +89,9 @@
         </div>
       </div>
     </div>
-    <a href="./page2.html" class="next">下一页</a>
   </div>
-
-<script src="../js/jquery/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="../js/index.js?v=201803281241"></script>
+  <script type="text/javascript" src="../js/wx/common.js?v=201803281241"></script>
+  <script type="text/javascript" src="../js/index.js?v=201803281241"></script>
 </body>
+
 </html>

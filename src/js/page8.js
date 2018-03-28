@@ -3,14 +3,16 @@ $(function(){
     var bottleTop = $('#bottle').offset().top
     var bottleLeft = $('#bottle').offset().left
     var n = 1
+    var deg = 1440
     var bool = new Parabola({
       el: "#bottle",
       offset: [-36, -230],
       curvature: 0.5,
-      duration: 2000,
+      duration: 1000,
       callback: function() {
         $('#bottle').css({opacity: 0});
         setTimeout(function(){
+          document.getElementById('close').play()
           $('#car').find('.car-sw').removeClass('open').addClass('close');
           $('#car').animate({
             left: 600
@@ -29,13 +31,18 @@ $(function(){
         } else {
           n -= 0.004
         }
+        if (deg < 0) {
+          deg = 0
+        } else {
+          deg -= 15
+        }
         $("<div>").appendTo(".top-part").css({
           "position": "absolute",
           "top": bottleTop + y,
           "left": bottleLeft + x
         });
         $('#bottle').css({
-          "transform": "scale(" + n + ")"
+          "transform": "scale(" + n + ") rotate(" + deg + "deg)"
         })
       }
     });
@@ -49,11 +56,13 @@ $(function(){
         setTimeout(function() {
           $('#car').find('.car-sw').addClass('open');
 
-          // document.getElementById('audio').play()
-          bool.start();
+          document.getElementById('open').play()
+          setTimeout(function(){
+            bool.start();
+          }, 500)
         }, 500)
       }
     });
   }
-  pet.wxShare('wxData', carRun, 'audio');
+  pet.wxShare('open', carRun, 'close', 'last-2');
 });

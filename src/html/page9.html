@@ -9,6 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="no" />
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="../css/style-page9.css?v=201803281241" />
+    <script src="../js/jquery/jquery-1.11.3.min.js"></script>
     <script type="text/javascript">
       function setRootSize() {
         var docWid = window.document.documentElement,
@@ -25,6 +26,12 @@
 <body>
   <div class="main-wrapper">
     <div class="page-9">
+      <div class="bgm">
+        <audio controls id="last-2" loop>
+          <source src="../media/last-2.mp3" type="audio/mpeg">
+          您的浏览器不支持 audio 元素。
+        </audio>
+      </div>
       <div class="top-part">
       	<svg id="sketchpad" preserveAspectRatio="xMinYMin meet" viewBox="-115,0,750,700" xmlns="http://www.w3.org/2000/svg">
 		  <g id="H5_part09" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-116.000000, 0.000000)">
@@ -61,5 +68,8 @@
       </div>
     </div>
   </div>
+
+  <script type="text/javascript" src="../js/wx/common.js?v=201803281241"></script>
+  <script type="text/javascript" src="../js/page9.js"></script>
 </body>
 </html>

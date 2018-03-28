@@ -1,7 +1,6 @@
 var pet = {
   //路径
   version: (new Date()).getTime(),
-  wxData: {},
   //load js or css
   loadFile: function(url, callback) {
     var elem;
@@ -38,7 +37,7 @@ var pet = {
 
   wxShare: function(wxData, callback, audioId, bgm) {
     var url = pet.url.split('#')[0],
-      wxData = wxData || {};
+      wxData = wxData || '';
     $.ajax({
       dataType: "json",
       type: 'POST',
@@ -70,6 +69,7 @@ var pet = {
                 document.getElementById(bgm).play()
               }
               if (callback) {
+                document.getElementById(wxData).load()
                 document.getElementById(audioId).load()
                 callback()
               }
