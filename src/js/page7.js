@@ -70,7 +70,9 @@ var pet = {
 
             //分享到...
             wx.ready(function() {
+              var topicList = ['#你喜欢/留在这座城市的理由#', '#你最想要删除的记忆#', '#你最想对前任说的一句话#', '#你当下最有冲动想做的事情#', '#十年之后，你想要做的事情#'];
               var tpIndex = pet.queryString('topic');
+              $("#write").text(topicList[tpIndex - 1]).delay(500).typewriter(300);
               $("#mymusic")[0].play();
               var time = parseInt($("#mymusic")[0].duration);
               $(".myMusicTime").text(time);
@@ -100,30 +102,31 @@ var pet = {
                     clearInterval(timer);
                     $(".voiceTime").text(time);
                   }
-                  $(".reListen").click(function(event) {
-                    if (localId == null) return;
-                    wx.playVoice({
-                      localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
-                    });
-                  });
-                  $("#again").click(function(event) {
-                    $(".voiceTime").text("0");
-                    localId = null;
-                  });
-                  $("#sure").click(function(event) {
-                    wx.uploadVoice({
-                      localId: localId, // 需要上传的音频的本地ID，由stopRecord接口获得
-                      isShowProgressTips: 1, // 默认为1，显示进度提示
-                      success: function(res) {
-                        // var serverId = res.serverId; // 返回音频的服务器端ID
-                      }
-                    });
-                  });
                 });
               }
+              $(".reListen").click(function(event) {
+                if (localId == null) return;
+                wx.playVoice({
+                  localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
+                });
+              });
+              $("#again").click(function(event) {
+                $(".voiceTime").text("0");
+                localId = null;
+              });
+              $("#sure").click(function(event) {
+                wx.uploadVoice({
+                  localId: localId, // 需要上传的音频的本地ID，由stopRecord接口获得
+                  isShowProgressTips: 1, // 默认为1，显示进度提示
+                  success: function(res) {
+                    // var serverId = res.serverId; // 返回音频的服务器端ID
+                  }
+                });
+              });
             })
           });
-        },
+        }
+      },
       error: function(xhr, type) {
         console.log('Ajax error!')
       }
@@ -132,9 +135,7 @@ var pet = {
 };
 
 $(function() {
-  var topicList = ['#你喜欢/留在这座城市的理由#', '#你最想要删除的记忆#', '#你最想对前任说的一句话#', '#你当下最有冲动想做的事情#', '#十年之后，你想要做的事情#'];
   var tpIndex = pet.queryString('topic');
-  $("#write").text(topicList[tpIndex - 1]).typewriter(300);
   $('#mymusic').find('source').attr('src', '../media/story/t' + tpIndex + '.m4a');
   pet.wxShare();
   //   var localId;
@@ -162,7 +163,12 @@ $(function() {
   //       console.log("停止录音");
   //       $(".btn_no").text("2");
   // }
-}); document.oncontextmenu = function(e) {
+  $('.audio_btn').bind('contextmenu', function(e) {
+    e.preventDefault();
+  });
+  window.ontouchstart = function(e) { e.preventDefault(); };
+});
+document.oncontextmenu = function(e) {
   //或者return false;
   e.preventDefault();
 };

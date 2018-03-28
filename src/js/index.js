@@ -24,7 +24,7 @@ $(function(){
     $('.speed').on('touchend',function(){
         clearInterval(timeDown);
     });
-    
+
     $('.stop').on('touchstart',function(){
         $("svg")[0].pauseAnimations();
                 park();
@@ -41,7 +41,7 @@ $(function(){
         // },20);
         // timer = setTimeout(function(){
         //     console.log(stopDownTime);
-        //     if(stopDownTime>=1000){            
+        //     if(stopDownTime>=1000){
         //         $("svg")[0].pauseAnimations();
         //         park();
         //         ispause=true;
@@ -52,6 +52,12 @@ $(function(){
         ispause=false;
         clearInterval(timeUp);
     });
+
+    $('.control-btn .btn').bind('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    window.ontouchstart = function(e) { e.preventDefault(); };
 });
 
 // 漂移入库点

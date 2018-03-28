@@ -53,11 +53,9 @@ $(function(){
     var id = $(this).data('id');
     $('#click-music').trigger('play');
     if (id === 1) {
-      setTimeout(function(){
-        location.href = './page7.html?topic=2'
-      }, 500)
+      window.location.href = "page7.html?topic=2"
     } else {
-      location.href = "./index.html"
+      window.location.href = "./index.html"
     }
   })
 });
