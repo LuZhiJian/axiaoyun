@@ -73,15 +73,6 @@ var pet = {
               var topicList = ['#你喜欢/留在这座城市的理由#', '#你最想要删除的记忆#', '#你最想对前任说的一句话#', '#你当下最有冲动想做的事情#', '#十年之后，你想要做的事情#'];
               var tpIndex = pet.queryString('topic');
               $("#write").text(topicList[tpIndex - 1]).delay(500).typewriter(300);
-              $("#mymusic")[0].play();
-              var time = parseInt($("#mymusic")[0].duration);
-              $(".myMusicTime").text(time);
-              var interval = setInterval(function() {
-                if ($("#mymusic")[0].ended) {
-                  $(".info2").fadeIn("400");
-                  clearInterval(interval);
-                }
-              }, 500);
               var localId;
               var time;
               $(".audio_btn")[0].ontouchstart = function() {
@@ -136,8 +127,28 @@ var pet = {
 
 $(function() {
   var tpIndex = pet.queryString('topic');
-  $('#mymusic').find('source').attr('src', '../media/story/t' + tpIndex + '.m4a');
+  $('#mymusic').find('source').attr('src', '../media/story/t' + tpIndex + '.mp3');
+  $("#mymusic")[0].load();
+  setTimeout(function(){
+    var time = $("#mymusic")[0].duration;
+    console.log(time);
+    $(".myMusicTime").text(time);
+  }, 500);
+
+
   pet.wxShare();
+  $('#topic-talk').click(function(){
+    $("#mymusic").trigger('play');
+    var interval = setInterval(function() {
+      if ($("#mymusic")[0].ended) {
+        $(".info2").fadeIn("400");
+        clearInterval(interval);
+      }
+    }, 500);
+  });
+
+
+
   //   var localId;
   // //   $(".audio_btn").mousedown(function(event) {
   // //       wx.startRecord();

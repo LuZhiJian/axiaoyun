@@ -3,6 +3,7 @@ $(function(){
     var bottleTop = $('#bottle').offset().top
     var bottleLeft = $('#bottle').offset().left
     var n = 0.1
+    var deg = 0
     var bool = new Parabola({
       el: "#bottle",
       offset: [74, 132],
@@ -18,13 +19,18 @@ $(function(){
         } else {
           n += 0.004
         }
+        if (deg > 1440) {
+          deg = 1440
+        } else {
+          deg += 5.5
+        }
         $("<div>").appendTo(".top-part").css({
           "position": "absolute",
           "top": bottleTop + y,
           "left": bottleLeft + x
         });
         $('#bottle').css({
-          "transform": "scale(" + n + ")"
+          "transform": "scale(" + n + ") rotate(" + deg + "deg)"
         })
       }
     });
