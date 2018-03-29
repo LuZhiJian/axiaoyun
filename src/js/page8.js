@@ -3,7 +3,7 @@ $(function(){
     var bottleTop = $('#bottle').offset().top
     var bottleLeft = $('#bottle').offset().left
     var n = 1
-    var deg = 1440
+    var deg = 360
     var bool = new Parabola({
       el: "#bottle",
       offset: [-36, -230],
@@ -34,7 +34,7 @@ $(function(){
         if (deg < 0) {
           deg = 0
         } else {
-          deg -= 15
+          deg -= 5
         }
         $("<div>").appendTo(".top-part").css({
           "position": "absolute",

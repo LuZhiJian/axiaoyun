@@ -91,6 +91,7 @@ var pet = {
                 wx.stopRecord({
                   success: function(res) {
                     localId = res.localId;
+                    $("#send")[0].play();
                     $(".info3").show();
                     $(".com_btn").show();
                     $(".audio_btn").fadeOut();
@@ -102,7 +103,7 @@ var pet = {
 
               var isPlay = false
               // 重听录音
-              $(".js_reListen").click(function(event) {
+              $("#js_reListen").click(function(event) {
                 if (localId == null) return;
                 if (isPlay) {
                   wx.pauseVoice({
@@ -118,10 +119,17 @@ var pet = {
                   isPlay = true
                 }
               });
+
+              wx.onVoicePlayEnd({
+                success: function (res) {
+                  var localId = res.localId; // 返回音频的本地ID
+                  $("#js_reListen").find('.volume').removeClass('bo');
+                }
+              });
               // 重录
               $("#again").click(function(event) {
                 $(".info3").hide();
-                $(".com_btn").show(0);
+                $(".com_btn").hide();
                 $(".voiceTime").text("0");
                 $(".audio_btn").fadeIn();
                 localId = null;
@@ -184,6 +192,7 @@ $(function() {
       if ($("#mymusic")[0].ended) {
         $(".info2").fadeIn("400");
         $(".audio_btn").fadeIn("400");
+        $(this).find('.volume').removeClass('bo');
         clearInterval(interval);
       }
     }, 500);
