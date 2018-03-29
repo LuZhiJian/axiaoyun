@@ -14,38 +14,37 @@
 
   .top-part {
     width: 100%;
-    height: 60%;
+    height: 56%;
     background: url('../img/part9-top-bg.png') no-repeat;
     background-size: 100% auto;
     position: relative;
 
-    .agian-line {
-      width: 100%;
-      text-align: center;
-      position: absolute;
-      bottom: rem(30);
-
-      a {
-        width: rem(300);
-        height: rem(80);
-        display: inline-block;
-        background: #286E97;
-        border: rem(2) solid #000000;
-        border-radius: rem(16);
-        font-size: rem(48);
-        color: #FFFBEA;
-        text-align: center;
-        line-height: rem(76);
-      }
-    }
   }
 
+  .agian-line {
+    width: 100%;
+    text-align: center;
+    padding-bottom:rem(20);
+
+    a {
+      width: rem(300);
+      height: rem(80);
+      display: inline-block;
+      background: #286E97;
+      border: rem(2) solid #000000;
+      border-radius: rem(16);
+      font-size: rem(48);
+      color: #FFFBEA;
+      text-align: center;
+      line-height: rem(76);
+    }
+  }
   .bottom-part {
     width: 100%;
     height: 40%;
     background-color: $color-base;
     position: relative;
-    padding-top: rem(50);
+    padding-top: rem(40);
 
     .left-tree, .right-tree{
       line-height: 0;
@@ -102,7 +101,7 @@
       width: rem(254);
       line-height: 0;
       position: absolute;
-      bottom: rem(40);
+      bottom: rem(60);
       left: 50%;
       margin-left: - rem(127);
 

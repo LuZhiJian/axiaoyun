@@ -74,19 +74,19 @@ function park() {
   var carL = $("#car").offset().left - $(".maps-wrap").offset().left;
   var carT = $("#car").offset().top - $(".maps-wrap").offset().top;
   // console.log(carL + "," + carT)
-  if (164 < carL && carL < 190 && 167 < carT && carT < 196) {
+  if (144 < carL && carL < 210 && 147 < carT && carT < 216) {
     location.href = "page2.html";
   }
-  if (77 < carL && carL < 117 && 240 < carT && carT < 259) {
+  if (57 < carL && carL < 137 && 220 < carT && carT < 279) {
     location.href = "page3.html";
   }
-  if (15 < carL && carL < 53 && 181 < carT && carT < 206) {
+  if (-5 < carL && carL < 73 && 161 < carT && carT < 226) {
     location.href = "page4.html";
   }
-  if (64 < carL && carL < 97 && 41 < carT && carT < 72) {
+  if (44 < carL && carL < 117 && 21 < carT && carT < 112) {
     location.href = "page5.html";
   }
-  if (132 < carL && carL < 162 && -15 < carT && carT < 18) {
+  if (112 < carL && carL < 182 && -35 < carT && carT < 38) {
     location.href = "page6.html";
   }
 }
