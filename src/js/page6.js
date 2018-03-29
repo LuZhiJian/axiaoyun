@@ -19,10 +19,10 @@ $(function(){
         } else {
           n += 0.02
         }
-        if (deg > 1440) {
-          deg = 1440
+        if (deg > 360) {
+          deg = 360
         } else {
-          deg += 15
+          deg += 5
         }
         $("<div>").appendTo(".top-part").css({
           "position": "absolute",

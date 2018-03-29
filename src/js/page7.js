@@ -70,18 +70,21 @@ var pet = {
 
             //分享到...
             wx.ready(function() {
-              var topicList = ['#你喜欢/留在这座城市的理由#', '#你最想要删除的记忆#', '#你最想对前任说的一句话#', '#你当下最有冲动想做的事情#', '#十年之后，你想要做的事情#'];
+              document.getElementById('accept').load()
+              document.getElementById('send').load()
               var tpIndex = pet.queryString('topic');
-              $("#write").text(topicList[tpIndex - 1]).delay(500).typewriter(300);
+              $('#mymusic').find('source').attr('src', '../media/story/t' + tpIndex + '.mp3');
+              $("#mymusic")[0].load();
               var localId;
               var time;
-              $(".audio_btn")[0].ontouchstart = function() {
+              $(".audio_btn")[0].ontouchstart = function(e) {
                 time = 0
                 $(this).text("松开结束");
                 wx.startRecord();
                 var timer = setInterval(function() {
                   time++;
                 }, 1000);
+                e.preventDefault();
               }
               $(".audio_btn")[0].ontouchend = function() {
                 $(this).text("按住录音");
@@ -90,22 +93,42 @@ var pet = {
                     localId = res.localId;
                     $(".info3").show();
                     $(".com_btn").show();
-                    clearInterval(timer);
+                    $(".audio_btn").fadeOut();
                     $(".voiceTime").text(time);
+                    clearInterval(timer);
                   }
                 });
               }
-              $(".reListen").click(function(event) {
+
+              var isPlay = false
+              // 重听录音
+              $(".js_reListen").click(function(event) {
                 if (localId == null) return;
-                wx.playVoice({
-                  localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
-                });
+                if (isPlay) {
+                  wx.pauseVoice({
+                    localId: localId // 需要暂停的音频的本地ID，由stopRecord接口获得
+                  });
+                  $(this).find('.volume').removeClass('bo');
+                  isPlay = false
+                } else {
+                  wx.playVoice({
+                    localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
+                  });
+                  $(this).find('.volume').addClass('bo');
+                  isPlay = true
+                }
               });
+              // 重录
               $("#again").click(function(event) {
+                $(".info3").hide();
+                $(".com_btn").show(0);
                 $(".voiceTime").text("0");
+                $(".audio_btn").fadeIn();
                 localId = null;
               });
+              // 确定
               $("#sure").click(function(event) {
+                location.href="page8.html";
                 wx.uploadVoice({
                   localId: localId, // 需要上传的音频的本地ID，由stopRecord接口获得
                   isShowProgressTips: 1, // 默认为1，显示进度提示
@@ -126,60 +149,47 @@ var pet = {
 };
 
 $(function() {
+  var firstControl = true
+  var topicList = ['#你喜欢/留在这座城市的理由#', '#你最想要删除的记忆#', '#你最想对前任说的一句话#', '#你当下最有冲动想做的事情#', '#十年之后，你想要做的事情#'];
   var tpIndex = pet.queryString('topic');
-  $('#mymusic').find('source').attr('src', '../media/story/t' + tpIndex + '.mp3');
-  $("#mymusic")[0].load();
-  setTimeout(function(){
-    var time = $("#mymusic")[0].duration;
-    console.log(time);
-    $(".myMusicTime").text(time);
-  }, 500);
+  $("#write").text(topicList[tpIndex - 1]).delay(500).typewriter(300);
 
+  $("#mymusic")[0].oncanplay = function () {
+    var time = parseInt($("#mymusic")[0].duration);
+    $(".myMusicTime").text(time);
+
+  }
+
+  setTimeout(function(){
+    $("#accept")[0].play();
+    $("#topic-talk").show();
+  }, 1500);
 
   pet.wxShare();
   $('#topic-talk').click(function(){
-    $("#mymusic").trigger('play');
+    if ($("#mymusic")[0].paused) {
+      $("#mymusic")[0].play();
+      $(this).find('.volume').addClass('bo')
+    } else {
+      $("#mymusic")[0].pause();
+      $(this).find('.volume').removeClass('bo')
+      if (firstControl) {
+        $("#accept")[0].play();
+        $(".info2").fadeIn("400");
+        $(".audio_btn").show();
+        firstControl = false
+      }
+    }
     var interval = setInterval(function() {
       if ($("#mymusic")[0].ended) {
         $(".info2").fadeIn("400");
+        $(".audio_btn").fadeIn("400");
         clearInterval(interval);
       }
     }, 500);
   });
 
-
-
-  //   var localId;
-  // //   $(".audio_btn").mousedown(function(event) {
-  // //       wx.startRecord();
-  // //   });
-  // // $(".audio_btn").mouseup(function(event) {
-  // //       wx.stopRecord({
-  // //           success: function (res) {
-  // //               localId = res.localId;
-  // //           }
-  // //       });
-  // //   });
-  // $(".btn_no").click(function(event) {
-  //       wx.playVoice({
-  //           localId: localId // 需要播放的音频的本地ID，由stopRecord接口获得
-  //       });
-  // });
-  // $(".audio_btn")[0].ontouchstart = function(){
-  //       console.log("开始录音");
-  //       $(".btn_no").text("1");
-  // }
-
-  // $(".audio_btn")[0].ontouchend = function(){
-  //       console.log("停止录音");
-  //       $(".btn_no").text("2");
-  // }
   $('.audio_btn').bind('contextmenu', function(e) {
     e.preventDefault();
   });
-  window.ontouchstart = function(e) { e.preventDefault(); };
 });
-document.oncontextmenu = function(e) {
-  //或者return false;
-  e.preventDefault();
-};

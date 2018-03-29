@@ -6,8 +6,8 @@ $(function(){
     var deg = 0
     var bool = new Parabola({
       el: "#bottle",
-      offset: [160, 120],
-      curvature: 0.02,
+      offset: [60, 120],
+      curvature: 0.1,
       duration: 1000,
       callback: function() {
         $('#bottle').addClass('swall');
@@ -19,10 +19,10 @@ $(function(){
         } else {
           n += 0.02
         }
-        if (deg > 1440) {
-          deg = 1440
+        if (deg > 360) {
+          deg = 360
         } else {
-          deg += 15
+          deg += 5
         }
         $("<div>").appendTo(".top-part").css({
           "position": "absolute",
@@ -35,7 +35,7 @@ $(function(){
       }
     });
     $('#car').animate({
-      left: 10
+      left: 100
     }, {
       duration: 1500,
       easing: 'linear',

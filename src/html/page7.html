@@ -1,50 +1,64 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN" data-rem="375">
+
 <head>
-<meta charset="UTF-8">
-<title>阿霄云活动</title>
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="apple-mobile-web-app-capable" content="no" />
-<meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" type="text/css" href="../css/style-page7.css?v=201803281241" />
-<script type="text/javascript">
-  function setRootSize() {
-    var docWid = window.document.documentElement,
-      width = docWid.getBoundingClientRect().width,
-      fontSize = (width >= 750) ? 40 : width / 750 * 40;
-    docWid.style.fontSize = fontSize + 'px';
-  }
-  window.addEventListener('resize', function() {
+  <meta charset="UTF-8">
+  <title>阿霄云活动</title>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="../css/style-page7.css?v=201803300302" />
+  <script type="text/javascript">
+    function setRootSize() {
+      var docWid = window.document.documentElement,
+        width = docWid.getBoundingClientRect().width,
+        fontSize = (width >= 750) ? 40 : width / 750 * 40;
+      docWid.style.fontSize = fontSize + 'px';
+    }
+    window.addEventListener('resize', function() {
+      setRootSize();
+    }, false);
     setRootSize();
-  }, false);
-  setRootSize();
-</script>
+  </script>
 </head>
+
 <body>
-<div class="main-wrapper page7">
+  <div class="main-wrapper page7">
+    <div class="bgm">
+      <audio controls id="accept">
+        <source src="../media/accept.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+      </audio>
+      <audio controls id="send">
+        <source src="../media/send.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+      </audio>
+    </div>
     <div class="bz" id="write"></div>
-    <div class="info1">
+    <div class="info1" id="topic-talk" style="z-index: 99999;">
       <audio controls id="mymusic">
         <source src="../media/story/t1.mp3" type="audio/mpeg">
         您的浏览器不支持 audio 元素。
       </audio>
-        <img src="../img/avatar.png" class="header" alt="">
-        <div class="box_middle" id="topic-talk"><img src="../img/volume.png" class="volume" alt=""></div>
-        <span class="miao"><em class="myMusicTime">0</em>"</span>
+      <img src="../img/avatar.png" class="header" alt="">
+      <div class="box_middle">
+        <div class="volume"></div>
+      </div>
+      <span class="miao"><em class="myMusicTime">0</em>"</span>
     </div>
     <div class="info1 info2" style="display:none;">
-        <img src="../img/avatar.png" class="header" alt="">
-        <div class="box_middle">你的呢？</div>
+      <img src="../img/avatar.png" class="header" alt="">
+      <div class="box_middle">你的呢？</div>
     </div>
-    <div class="info1 info3" style="display:none;">
-        <div class="box">
-            <img src="../img/avatar.png" class="header" alt="">
-            <div class="box_middle"><img src="../img/volume.png" class="volume" alt=""></div>
-            <span class="miao"><em class="voiceTime">0</em>"</span>
-        </div>
-        <a class="reListen">回听</a>
+    <div class="info1 info3" id="js_reListen" style="display:none; z-index: 99999;">
+      <div class="box">
+        <img src="../img/avatar.png" class="header" alt="">
+        <div class="box_middle"><div class="volume"></div></div>
+        <span class="miao"><em class="voiceTime">0</em>"</span>
+      </div>
+      <a class="reListen">回听</a>
     </div>
     <!-- 横线 -->
     <div class="line8_1">
@@ -74,16 +88,14 @@
 
     <img src="../img/point_bg.png" class="bd" alt="">
     <div class="com_btn" style="display:none;">
-        <a href="javascript:;" id="sure" class="btn btn_no">确认</a>
-        <a href="javascript:;" id="again" class="btn btn_yes">重录</a>
+      <a href="javascript:;" id="sure" class="btn btn_no">确认</a>
+      <a href="javascript:;" id="again" class="btn btn_yes">重录</a>
     </div>
     <div class="audio_btn">按住录音</div>
-</div>
-<script src="../js/jquery/jquery-1.11.3.min.js"></script>
-<!-- <script src="../js/textillate/jquery.fittext.js"></script>
-<script src="../js/textillate/jquery.lettering.js"></script>
-<script src="../js/textillate/jquery.textillate.js"></script> -->
-<script src="../js/text/txt.write.js"></script>
-<script type="text/javascript" src="../js/page7.js?v=201803281300"></script>
+  </div>
+  <script src="../js/jquery/jquery-1.11.3.min.js"></script>
+  <script src="../js/text/txt.write.js"></script>
+  <script type="text/javascript" src="../js/page7.js?v=201803300302"></script>
 </body>
+
 </html>
